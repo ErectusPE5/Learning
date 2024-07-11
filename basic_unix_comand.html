@@ -23,6 +23,332 @@
     <p>
       <strong>NOTE:</strong><i>Unix is a case-sensitive environment. Be sure not to use a capital letter in place of a lowercase letter; the results will not be what you expect. </i> 
     </p>
-    
+    <hr/>
+    <h3>Informative Commands</h3>
+    <p>
+    These commands provide information about your login, environment, terminal, machine, and system. They also allow you to make some changes to these states. These are listed in alphabetic order, 
+      not in order of importance. 
+    </p>
+    <P>
+<CENTER>
+<TABLE BORDER>
+<TH ALIGN=LEFT><TT>date</TT>
+	<TD COLSPAN=2> <I>to display the current <B>date</B> and time</I>
+<TR>
+<TD COLSPAN=3 HEIGHT=0> &#160 <TR>
+<TH ALIGN=LEFT><TT>kill</TT>
+	<TD COLSPAN=2> <I>to <B>kill</B> (or destroy) the process with a given
+	<TT>pid</TT> (process identification number) as argument</I>
+<TR>
+<TD COLSPAN=3> &#160 <TR>
+<TH ALIGN=LEFT NOWRAP><TT>logout</TT>
+	<TD COLSPAN=2> <I>to <B>log out</B> from the Unix system</I>
+<TR>
+<TD COLSPAN=3 HEIGHT=0> &#160 <TR>
+<TH ALIGN=LEFT><TT>man</TT>
+	<TD COLSPAN=2> <I>to get information on a Unix command;
+		<BR> &#160; to look up the page in the online
+			<B>man</B>ual for that command</I>
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>man CC</TT>
+		<TD> shows the pages of the Unix manual referring
+		to the C++ compiler (<TT>CC</TT>) on the screen.
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+
+<TH ALIGN=LEFT><TT>nslookup</TT>
+	<TD COLSPAN=2> <I>to find the address of a given machine</I>
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>nslookup yourmach</TT>
+		<TD> returns the name and address of the machine
+		<TT>yourmach</TT>, along with the name and address
+		of its server.
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+
+<TH ALIGN=LEFT><TT>passwd</TT>
+	<TD COLSPAN=2> <I>to change your current <B>passw</B>or<B>d</B></I>
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+<TH ALIGN=LEFT><TT>printenv</TT>
+	<TD COLSPAN=2> <I>to show the current <B>env</B>ironment setting</I>
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+<TH ALIGN=LEFT><TT>ps</TT>
+	<TD COLSPAN=2> <I>to list your current <B>p</B>roces<B>s</B>es by
+		 their <TT>pid</TT> (process identification number) </I>
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+<TH ALIGN=LEFT><TT>setenv</TT>
+	<TD COLSPAN=2> <I>to change an <B>env</B>ironment <B>set</B>ting</I>
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>setenv DISPLAY yourmach:0</TT>
+		<TD> tells the Xserver that the Xterminal named
+		<TT>yourmach</TT> is where any windows created
+		are to be displayed.
+<TR>
+<TD> &#160
+<TH ALIGN=LEFT NOWRAP><TT>setenv PRINTER xxx</TT>
+	<TD> makes <TT>xxx</TT> be the default
+		printer for any <TT>lpr</TT>
+		or <TT>enscript</TT>
+		commands.
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+<TH ALIGN=LEFT><TT>source</TT>
+	<TD COLSPAN=2> <I>to reexecute a <B>source</B> shell script file</I>
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>source .login</TT>
+		<TD> re-executes your <TT>.login</TT> file 
+		<BR> &#160; (normally executed when you log in);
+		<BR> useful after making changes to the .login file
+		<BR> &#160; (removing the need to exit and re-login);
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+<TH ALIGN=LEFT><TT>time</TT>
+	<TD COLSPAN=2> <I>to <B>time</B> the execution of a given command</I>
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>time anyunixcommand</TT>
+		<TD> executes <TT>anyunixcommand</TT> and returns
+		the user, system, and total time taken for the execution
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+<TH ALIGN=LEFT><TT>who</TT>
+	<TD COLSPAN=2> <I>to list the users currently logged in
+		to given machine;
+		<BR> &#160;  to find out <B>who</B> is logged in</I>
+<TR>
+<TD COLSPAN=3> &#160 <TR>
+<TH ALIGN=LEFT><TT>whoami</TT>
+	<TD COLSPAN=2> <I>to display login of user currently logged
+	onto given terminal;
+		<BR> &#160; to answer the question:  "<B>Who am I</B>?"</I>
+<TR>
+</TABLE>
+</CENTER>
+
+
+ <P><HR NOSHADE COLOR=NAVY><P>
+<H3>File Manipulation:</H3>
+<DL>
+<DD> A basic understanding of the Unix file system is required.  Unix
+allows files in your <I>login</I> directory (the directory you exist in
+when you successfully login to a Unix system);  Unix also permits the
+creation of subdirectories to contain files. 
+<P>
+<DD>The Unix operating system uses a tree structure for storing files. The main
+root of this tree (for the whole machine or system) is named <TT>/</TT>. 
+Your main (or <I>home</I>) directory
+can be addressed as <TT>&#126; </TT> or <TT>&#126;yourloginname </TT>.  The
+home directory
+of another user with login <TT>guy</TT> would be <TT>&#126;guy </TT>.  The
+current directory (the one you
+are working in at the current time) is referred to by a single dot
+(<TT>.</TT>).  The parent directory (the
+next one up the tree) is represented by two dots (<TT>..</TT>).
+<P>
+<DD> Now suppose your loginname
+is <TT>stu</TT> and consider the following set of files:
+<P>
+<CENTER>
+<IMG SRC="Figures/UNIXfiles.gif">
+</CENTER>
+<P>
+<DD> In the above structure, the subdirectories existing under the login
+directory (<TT>&#126;stu </TT>) are shown; 
+these subdirectories are named <TT>A</TT>,
+<TT>B</TT>, <TT>C</TT>, <TT>V</TT>, <TT>W</TT>, <TT>X</TT>, <TT>Y</TT>,
+and <TT>Z</TT>.  Note that <TT>A</TT>, <TT>B</TT>, and <TT>C</TT>
+are subdirectories of <TT>&#126;stu </TT>.  Also note that 
+	<UL>
+	<LI><TT>V</TT> and <TT>W</TT> are subdirectories of <TT>A</TT>;
+	<LI><TT>B</TT> has no subdirectories; 
+	<LI>subdirectory <TT>C</TT> has subdirectories <TT>X</TT>,
+		<TT>Y</TT>, and <TT>Z</TT>. 
+	</UL>
+Any number of files (or none at all) can exist in any subdirectory.
+<P>
+<DD>All file names in the following examples use capital letters, e.g.,
+<TT>ABC</TT>.  Lowercase letters and digits could have been used as well;
+for example, <TT>9dec91</TT> and <TT>afile</TT> are legal filenames. 
+Remember that Unix distinguishes between upper and lower case;  <TT>XYZ</TT>
+and <TT>xyz</TT> refer to different files.
+</DL>
+<P>
+<CENTER>
+<TABLE BORDER>
+<TH ALIGN=LEFT><TT> cd</TT>
+	<TD COLSPAN=2> <I>to <B>c</B>hange <B>d</B>irectory</I>
+<TR>
+<TD> &#160
+<TH ALIGN=LEFT NOWRAP><TT>cd ABC</TT>
+	<TD> moves to a subdirectory named <TT>ABC</TT> located below
+		your current directory.
+<TR>
+<TD> &#160
+<TH ALIGN=LEFT NOWRAP><TT>cd ..</TT>
+	<TD> moves to the parent directory
+	of your current directory.
+<TR>
+<TD> &#160
+<TH ALIGN=LEFT NOWRAP><TT>cd</TT>
+	<TD> moves to your home directory.
+<TR>
+<TD> &#160
+<TH ALIGN=LEFT NOWRAP><TT>cd ../ADIR</TT>
+	<TD> moves to a directory named <TT>ADIR</TT> located in
+	the parent directory of your current directory.
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+
+<TH ALIGN=LEFT><TT>cp</TT>
+	<TD COLSPAN=2> <I>to <B>c</B>o<B>p</B>y one file to another;
+		<BR> &#160; copies the contents of the first file
+			(or directory)
+		<BR> &#160; &#160; &#160; to the second file (or directory),
+		<BR> &#160;  without changing the
+			contents of the first file (or directory)</I>
+<TR>
+<TD> &#160
+<TH ALIGN=LEFT NOWRAP><TT>cp ABC DEF</TT>
+	<TD> copies file <TT>ABC</TT> to (or on top of) a
+	file named <TT>DEF</TT>.
+<TR>
+<TD> &#160
+<TH ALIGN=LEFT NOWRAP><TT>cp -i ABC ADIR/DEF</TT>
+	<TD> copies file <TT>ABC</TT> to (or on top of) a file named
+	<TT>DEF</TT> in the directory <TT>ADIR</TT>.  Requests approval for
+	overwriting the file if the file <TT>ADIR/DEF</TT> already exists.
+	(<TT>-i</TT> means <TT>i</TT>nteractive.)
+<TR>
+<TD> &#160
+<TH ALIGN=LEFT NOWRAP><TT>cp -r ADIR BDIR</TT>
+	<TD> copies the entire contents of the directory <TT>ADIR</TT>
+	to a new (or on top of the old) directory <TT>BDIR</TT>. (<TT>-r</TT>
+	means <TT>r</TT>ecursive.)
+<TR>
+<TD COLSPAN=3> &#160 <TR>
+
+<TH ALIGN=LEFT NOWRAP><TT>expand</TT>
+	<TD COLSPAN=2> <I>to <B>expand</B>  the tab characters found
+		in one file
+		<BR> &#160; &#160; &#160; into spaces in a new file
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>expand AFILE BFILE</TT>
+		<TD> copies the contents of <TT>AFILE</TT> into
+			a new file called <TT>BFILE</TT>, 
+			changing all tab characters to spaces.
+<TR>
+<TD COLSPAN=3> &#160 <TR>
+
+<TH ALIGN=LEFT NOWRAP><TT>ls</TT>
+	<TD COLSPAN=2> <I>to display file information
+		(to <B>l</B>ist <B>s</B>ubdirectory);
+		<BR> &#160; lists only the file names of the files in
+			the current subdirectory</I>
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>ls</TT>
+		<TD> lists all files in your current directory.
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>ls -a</TT>
+		<TD> lists all files in your current directory, including
+		any <EM>dot</EM>(<TT>.</TT>) files (e.g., <TT>.login</TT>).
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>ls *.java</TT>
+		<TD> lists all files in your current directory that
+		end with the characters '<TT>.java</TT>' (e.g.,
+		<TT>example1.java</TT>).
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>ls -F</TT>
+		<TD> lists files in your current directory,
+		putting a slash (<TT>/</TT>) after those that are directories
+		and an asterisk (<TT>*</TT>) after those that are executables.
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>ls -l</TT>
+		<TD> lists all files in your current directory, showing
+		protection codes, date of creation (or most recent
+		modification), and size.
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+
+<TH ALIGN=LEFT NOWRAP><TT>mkdir</TT>
+	<TD COLSPAN=2> <I>to <B>m</B>a<B>k</B>e a new sub<B>dir</B>ectory
+		within (or below) the current directory</I>
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>mkdir BDIR</TT>
+		<TD> creates a new subdirectory named <TT>BDIR</TT>
+		within the current working directory.
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+
+<TH ALIGN=LEFT NOWRAP><TT>mv</TT> 
+	<TD COLSPAN=2> <I>to rename (or <B>m</B>o<B>v</B>e) a file;
+		<BR> &#160; renames the first file (or directory) named
+			to the name of the second;
+		<BR> &#160; the first file (or directory) no longer exists</I>
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>mv -i ABC DEF</TT>
+		<TD> renames <TT>ABC</TT> to <TT>DEF</TT>;  can also
+		be thought of as moving the file <TT>ABC</TT> on top of file
+		<TT>DEF</TT>.  asking permission if the file <TT>DEF</TT>
+		already exists. (<TT>-i</TT> for <TT>i</TT>nteractive.) 
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+
+<TH ALIGN=LEFT NOWRAP><TT>pwd</TT>
+	<TD COLSPAN=2> <I>to display full <B>p</B>athname of current
+		<B>w</B>orking sub<B>d</B>irectory;
+		<BR> &#160; to provide the name of the subdirectory you
+			are currently working in</I>
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+
+<TH ALIGN=LEFT NOWRAP><TT>rm</TT>
+	<TD COLSPAN=2> <I>to <B>r</B>e<B>m</B>ove (delete) a file;
+		<BR> &#160; once deleted, this file is
+			<B>unretrievable</B>
+		<BR> &#160; &#160; &#160; (unlike the Trash Bin
+			facility on PCs and Macs)</I>
+
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>rm ABC DEF</TT>
+		<TD> deletes both <TT>ABC</TT> and <TT>DEF</TT>.
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>rm -i ABC DEF</TT>
+		<TD> first asks you if you really want to delete these
+		files;  then deletes the ones for which you respond
+		yes (<TT>y</TT>).
+		(<TT>-i</TT> for <TT>i</TT>nteractive.)
+<TR>
+<TD COLSPAN=3 HEIGHT=1> &#160 <TR>
+
+<TH ALIGN=LEFT NOWRAP><TT>rmdir</TT>
+	<TD COLSPAN=2> <I>to <B>r</B>e<B>m</B>ove (delete) a 
+		sub<B>dir</B>ectory;
+		<BR> &#160;  the subdirectory cannot contain any files;
+		<BR> &#160; &#160; &#160; you need to <TT>rm</TT> (delete
+			or purge) them first</I>
+<TR>
+	<TD> &#160
+	<TH ALIGN=LEFT NOWRAP><TT>rmdir MNO</TT>
+		<TD> deletes the empty subdirectory named <TT>MNO</TT>.
+<TR>
+</TABLE>
+</CENTER>     
   </body>
 </html>
