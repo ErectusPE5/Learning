@@ -1,0 +1,375 @@
+<html>
+  <head>
+    <title>Lamp Configuration</title>
+    <style>
+      .comand{
+        background: black;
+        color: #DAA520;
+        font-size: 16px;
+        padding: 16px;
+        width: fit-content;
+        font-wheight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .comand-arg{
+        color: white
+      }
+
+      .comand-info{
+        margin-top: 8px;
+      }
+      
+      .comand-header{
+        margin: -16px;
+        background: #566573;
+        font-size: 16px;
+        padding: 16px;
+        width: fit-parent;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Install Linux, Apache, MySQL, PHP (LAMP) Stack on Ubuntu</h1>
+    <h3>Steps</h3>
+    <ol>
+      <li> Update the system</li>
+      <li>Install Apache Web server</li>
+      <li>Install MySQL database system</li>
+      <li>Install PHP</li>
+      <li>Install phpMyAdmin</li>
+    </ol>
+    
+    <h2>Step 1. Update the system</h2>
+    <div class="comand">
+        sudo apt <span class="comand-arg">update -y</span> && sudo apt <span class="comand-arg">upgrade -y</span>
+    </div>
+    <hr/>
+    
+    <h2>Step 2. Install Apache Web server</h2>
+    <div class="description">
+    The Apache web server is open-source software written in C and can run on multiple operating systems such as Windows, Linux, OpenVMS, etc. According to the world statistics, the Apache web server is currently the most used, leading Nginx and Cloudflare as its concurrent. Let's do it in the fallowing 3 steps.
+    </div>
+    <ol>
+     <li>
+    <div class="comand-info">
+    To install the Apache web server, execute the commands below:
+    </div>
+    <div class="comand">
+      sudo apt install <span class="comand-arg">apache2 -y</span>
+    </div>
+    </li>
+    
+    <li>
+    <div class="comand-info">
+    Once the web server is installed, we need to start and enable the apache2 service:
+    </div>
+    <div class="comand">
+      sudo systemctl start <span class="comand-arg">apache2</span> && sudo systemctl enable <span class="comand-arg">apache2</span>
+    </div>
+    </li>
+    
+    <li>
+    <div class="comand-info">
+      To check the status of the service, execute the following command:
+    </div>
+    <div class="comand">
+      sudo systemctl status <span class="comand-arg">apache2</span>
+    </div>
+    
+    <div class="comand-info">
+      If everything is OK, you should receive the following output at the end line of the message:
+    </div>
+    <div class="comand">
+   <span class="comand-arg">Jul 27 20:15:39 host.test.vps systemd[1]: Starting apache2.service - The Apache HTTP Server...</span>
+    </div>
+    </li>
+    </ol>
+    <hr/>
+    
+    <h2>Step 3. Install MySQL database system</h2>
+    <div class="description">
+       <div>
+        Now that you have a web server up and running, you need to install the database system to be able to store and 
+        manage data for your site.
+        </div>
+        MySQL is an open-source relational database management system. As a component of the LAMP stack MySQL is used by 
+        many database-driven PHP web applications and frameworks such as WordPress, Drupal, Joomla, etc. 
+        Let's do it again in the fallowing 3 steps
+    </div>
+    
+    <ol>
+    <li>
+    <div class="comand-info">
+        To install MySQL, execute the following command:
+    </div>
+    <div class="comand">
+       sudo apt install <span class="comand-arg">mysql-server -y</span>
+    </div>
+    </li>
+    <li>
+    <div class="comand-info">
+        Once the MySQL server is installed, we need to start and enable the service:
+    </div>
+    <div class="comand">
+       sudo systemctl start <span class="comand-arg">mysql</span> && sudo systemctl enable <span class="comand-arg">mysql </span>
+    </div>
+    </li>
+    
+    <li> 
+    <div class="comand-info">
+        To check the status of the service, execute the following command:
+    </div>
+    <div class="comand">
+       sudo systemctl status <span class="comand-arg">mysql</span> 
+    </div>
+    <div class="comand-info">
+      If everything is OK, you should get output at the end of the line similar to this:
+    </div>
+    <div class="comand">
+      <span class="comand-arg">
+       Jul 27 20:40:17 host.test.vps systemd[1]: Starting mysql.service - MySQL Community Server...
+       <div>Jul 27 20:40:18 host.test.vps systemd[1]: Started mysql.service - MySQL Community Server.</div>
+      </span>
+    </div>
+    </li>
+    </ol>
+    <hr/>
+    
+    <h2>Step 4. Install PHP</h2>
+     You have Apache installed to serve your content and MySQL installed to store and manage your data. 
+     PHP is a “Hypertext Preprocessor” back-end scripting language used for creating dynamic web pages. 
+     It is widely used by developers around the world. 
+     <div>
+      As a part of the LAMP stack on Ubuntu 24.04, the included version of PHP in the Ubuntu 24.04 repository is PHP8.3. 
+      In addition to the <strong>php</strong> package, you’ll need <strong>php-mysql</strong>, a PHP module that allows PHP 
+      to communicate with MySQL-based atabases. You’ll also need <strong>libapache2-mod-php </strong>to enable Apache to 
+      handle PHP files. Core PHP packages will automatically be installed as dependencies.
+      Let's do it in the fallowing steps
+    </div>
+    
+    <ol>
+      <li>
+        <div class="comand-info">
+          To install these packages, run the following command:
+        </div>
+        <div class="comand">
+          sudo apt install <span class="comand-arg">php libapache2-mod-php php-mysql</span>
+        </div> 
+        <div class="comand-info">
+          Once installed, you can check the PHP version with the command below:
+        </div>
+        <div class="comand"><span class="comand-arg">php -v</span></div>
+        <div class="comand-info">
+          If everything is OK, you should get output at the end of the line similar to this:
+        </div>
+        <div class="comand">
+          <span class="comand-arg">
+            root@host:~# php -v
+            <div>PHP 8.3.0-1ubuntu1 (cli) (built: Jul 27 2024 14:00:34) (NTS)</div>
+            <div>Copyright (c) The PHP Group</div>
+            <div>Zend Engine v4.3.0, Copyright (c) Zend Technologies</div>
+            <div>with Zend OPcache v8.3.0-1ubuntu1, Copyright (c), by Zend Technologies</div>
+          </span>
+        </div>
+     </li>
+     
+    <li>
+      <div class="comand-info"><strong>Changing Apache’s Directory Index (Optional)</strong></div>
+      <div>
+       In some cases, you’ll want to modify the way that Apache serves files when a directory is requested. Currently, 
+       if a user requests a directory from the server, Apache will first look for a file called <strong>index.html</strong>. 
+       We want to tell the web server to prefer PHP files over others, to make Apache look for an <strong>index.php</strong> 
+       file first.
+      </div>
+      <div class="comand-info">
+      To make this change, open the <strong>dir.conf</strong> configuration file in a text editor of your choice. 
+      Here, we’ll use <strong>nano</strong>:
+      </div>
+      
+      <div class="comand">sudo nano <span class="comand-arg">/etc/apache2/mods-enabled/dir.conf</span></div>
+      
+      <div class="comand-info">It will look like this:</div>
+      <div class="comand">
+        <div class="comand-header">
+         /etc/apache2/mods-enabled/dir.conf
+        </div><br/>
+        <div class="comand-arg">
+            <<strong>IfModule</strong> mod_dir.c>
+                <p>  <strong>DirectoryIndex</strong> index.html index.cgi index.pl index.php index.xhtml index.htm</p>
+            <<strong>/IfModule</strong>>
+        </div>
+      </div>
+      
+      <div class="comand-info">
+        Move the PHP index file (highlighted above) to the first position after the DirectoryIndex specification, like this:
+      </div>
+      <div class="comand">
+        <div class="comand-header">
+         /etc/apache2/mods-enabled/dir.conf
+        </div><br/>
+        <div class="comand-arg">
+            <<strong>IfModule</strong> mod_dir.c>
+                <p>  <strong>DirectoryIndex</strong> index.php index.html index.cgi index.pl index.xhtml index.htm</p>
+            <<strong>/IfModule</strong>>
+        </div>
+      </div>
+      
+      <div class="comand-info">
+      After Edited, save and close the file by pressing <strong>CTRL+X. </strong>Confirm the save by typing Y and then hit 
+      <strong>ENTER</strong> to verify the file save location. Then restart the Apache web server in order to apply changes using 
+      the following command:
+      </div>
+      <div class="comand"> sudo systemctl restart <span class="comand-arg">apache2</span> </div> 
+    
+     <div class="comand-info"> Finally check on the status of the apache2 service using systemctl:</div>
+     <div class="comand">sudo systemctl status <span class="comand-arg">apache2</span></div>
+     <div class="comand-info">
+          If everything is OK, you should get output at the end of the line similar to this:
+        </div>
+        <div class="comand">
+          <span class="comand-arg">Jul 27 16:22:59 ubuntu2404 systemd[1]: Started The Apache HTTP Server.</span>
+        </div>
+     </li>
+     
+     <li>
+       <div class="comand-info"><strong>Installing PHP Extensions (Optional)</strong></div>
+       <div class="comand-info">
+       To extend the functionality of PHP, you have the option to install some additional modules. To see the available options for PHP modules and libraries, 
+       pipe the results of apt search into less, a pager which lets you scroll through the output of other commands:
+       </div>
+       <div class="comand">apt search<span class="comand-arg"> php-</span> | less </div>
+       Use the arrow keys to scroll <strong>up</strong> and <strong>down</strong>, and press <strong>Q</strong> to quit.
+       
+       <div class="comand-info">Alternatively, look at the long description of the package by typing:</div>
+       <div class="comand">apt show  <span class="comand-arg">php-package_name</span> </div>
+       
+       <div class="comand-info">If you decided to install some packege named <strong>package_name</strong>, you could type:</div>
+       <div class="comand">sudo apt install  <span class="comand-arg">php-package_name</span> </div>
+       
+       <div class="comand-info">
+        If you want to install more than one module, you can do that by listing each one, separated by a space, following the apt install command, like this:
+       </div>
+       <div class="comand">sudo apt install  <span class="comand-arg">php-package1 php-package2 ...</span> </div>
+       
+       <div class="comand-info">Or symply in a curly bracket separated by comma :</div>
+       <div class="comand">sudo apt install  <span class="comand-arg">php-{package1,package2,package3,...}</span> </div>
+       
+       <div class="comand-info">You can also use a combination of both:</div>
+       <div class="comand">sudo apt install  <span class="comand-arg">php-package1 php-{package2,package3,...}</span> </div>
+       
+       <div class="comand-info">For now let's install important packages and extensions:</div>
+       <div class="comand">sudo apt install  <span class="comand-arg">php-cli php-{bz2,curl,mbstring,intl} -y</span> </div>
+     </li>
+     
+     <li>
+       <div class="comand-info"><strong>Creating a Virtual Host for your Website(Optional)</strong></div>
+       Apache on Ubuntu has one virtual host enabled by default that is configured to serve documents from the <strong>/var/www/html</strong> directory. 
+       While this works well for a single site, it can become unwieldy if you are hosting multiple sites. Instead of modifying <strong>/var/www/html</strong>, 
+       we’ll create a directory structure within <strong>/var/www</strong> for the <strong>jucavm</strong> site, leaving <strong>/var/www/html</strong>
+       in place as the default directory to be served if a client request doesn’t match any other sites.
+
+      <div class="comand-info">Create the directory for <strong>jucavm</strong> as follows:</div>
+      <div class="comand"> sudo mkdir <span class="comand-arg">/var/www/jucavm</span> </div>
+      
+      <div class="comand-info"> Then assign ownership of the directory with <strong>www-data</strong>:</div>
+      <div class="comand">sudo chown -R <span class="comand-arg">www-data:www-data /var/www/jucavm</span> </div>
+      
+      <div class="comand-info"> Or <strong>$USER</strong> environment variable, which will reference your current system user:</div>     
+      <div class="comand">sudo chown -R <span class="comand-arg">$USER:$USER /var/www/jucavm</span> </div>
+      
+      <div class="comand-info"> Next open a new configuration file for <strong>jucavm</strong> site in Apache’s sites-available directory</div>
+      <div class="comand">sudo nano  <span class="comand-arg">/etc/apache2/sites-available/jucavm.conf</span> </div>
+      
+      <div class="comand-info">Then write down in the following bare-bones configuration with your own domain name(<strong>jucavm</strong>):</div>
+      <div class="comand">
+        <div class="comand-header">
+         /etc/apache2/sites-available/jucavm.conf
+        </div><br/>
+        <div class="comand-arg">
+            <<strong>VirtualHost</strong> *:80>
+                  <p> <strong> ServerName</strong> jucavm</p>
+                  <p> <strong> ServerAlias</strong> www.jucavm</p>
+                  <p> <strong> ServerAdmin</strong> webmaster@localhost</p>
+                  <p> <strong> DocumentRoot</strong> /var/www/jucavm</p>
+                  <p> <strong> ErrorLog</strong> ${APACHE_LOG_DIR}/error.log</p>
+                  <p> <strong> CustomLog</strong> ${APACHE_LOG_DIR}/access.log combined</p>
+            <<strong>/VirtualHost</strong>>
+        </div>
+      </div>
+      Save and close the file when you’re done. If you’re using <strong>nano</strong>, do that by pressing <strong>CTRL+X</strong>, then Y and ENTER.
+      
+      <div class="comand-info">Now, enable the new virtual host using a2ensite :</div>
+      <div class="comand">sudo a2ensite <span class="comand-arg">jucavm</span> </div>
+      
+      <div class="comand-info">To make sure your new site configuration file doesn’t contain syntax errors, run the following command:</div>
+      <div class="comand">sudo apache2ctl configtest</div> 
+ 
+      <div class="comand-info">Reload Apache to apply the new configuration changes:</div>
+      <div class="comand">sudo systemctl reload apache2</div>
+      
+      <div class="comand-info">To test that the new virtual host works as expected, create an <strong>index.html</strong> file in that location your site 
+      web directory:</div>
+      <div class="comand">nano <span class="comand-arg">/var/www/jucavm/index.html</span> </div>
+      
+      <div class="comand-info">Write down some html content on the new <strong>index.html</strong> file:</div>
+      <div class="comand">
+        <div class="comand-header">
+         /var/www/jucavm/index.html
+        </div><br/>
+        <div class="comand-arg">
+            <html>
+              <head>
+                <title>JUCAVM Website</title>
+              </head>
+              <body>
+                <h1>Hello JUCAVM!</h1>
+              </body>
+            </html>
+        </div>
+      </div>
+       Save and close the file when you’re done. If you’re using <strong>nano</strong>, do that by pressing <strong>CTRL+X</strong>, then Y and ENTER.
+       
+       
+     </li>
+     
+     <li>
+     
+       <div class="comand-info"><strong>Testing PHP Processing on your Web Server</strong></div>
+       <div>
+        You have a created custom location to host your website’s files and folders. Now you have to test php is processing as expected. 
+        
+       </div>
+       <div class="comand-info">Create a new file named <strong>info.php</strong> inside your custom web root folder:</div>
+       <div class="comand">nano <span class="comand-arg">/var/www/jucavm/info.php</span> </div>
+       
+       <div class="comand-info"> Write the fallowing PHP line of code, inside the file:</div>
+       <div class="comand">
+        <div class="comand-header">
+         /var/www/jucavm/info.php
+        </div><br/>
+        <div class="comand-arg">
+        
+            <?php
+              phpinfo();
+            ?>
+        </div>
+      </div>
+       Save and close the file when you’re done. If you’re using <strong>nano</strong>, do that by pressing <strong>CTRL+X</strong>, then Y and ENTER.
+      
+      <div class="comand-info">
+       To test php is processing as expected with this script, go to your web browser and access your server’s domain name or IP address, 
+       followed by the script name, which in this case is info.php:
+      </div>
+      <div class="comand">http://server_domain_or_IP/info.php</div>
+
+     </li>
+     
+     <li>
+     <div class="comand-info"><strong>Testing Database Connection from PHP (Optional)</strong></div>
+     </li>
+    </ol>
+    
+    
+  </body>
+</html>
