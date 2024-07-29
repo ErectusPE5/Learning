@@ -2,12 +2,227 @@
   <head>
     <title>Lamp Configuration</title>
     <style>
+    body {
+	    font-family : sans-serif, Verdana, Geneva, Arial, Helvetica;
+	    background-color: #D8DBE2;
+	    padding-left: 10%;	
+	    padding-right: 10%;
+    } 
+    .content{
+      padding: 8px;
+	    border: 3px solid gray;
+	    background-color: White;	
+    }
+    h1
+      {
+	      font-family : sans-serif, Verdana, Geneva, Arial, Helvetica;
+	      font-size : x-large;
+	      font-weight : bold;
+	      color : Black;
+	      text-align : center;
+	      width : 90%;
+	      border-top-width : 1px;
+	      border-bottom-width : 1px;
+	      border : 1px solid Black;
+	      border-left-width : 0px;
+	      border-right-width : 0px;
+	      padding : 10px;     
+	      padding-left : 5%;
+	      padding-right : 5%;
+      }
+      h2
+      {
+	      font-family : sans-serif, Verdana, Geneva, Arial, Helvetica;
+	      font-size : larger;
+	      font-weight : bold;
+	      color : White;
+	      padding : 8px;
+	      width : 90%;
+	      background : #336699;
+	      border : 1px solid White;
+	      margin-top : 30px;	           
+	      padding-left : 5%;
+	      padding-right : 5%;
+      }
+  div.main_page {
+    font-family: Ubuntu, Verdana, sans-serif;
+    font-size: 11pt;
+    text-align: center;
+    position: relative;
+    display: table;
+    width: 70%;
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 0px 0px 0px;
+    border-width: 2px;
+    border-color: #212738;
+    border-style: solid;
+    border-bottom: 2px solid #FFFFFF;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin-top : 30px;	
+  }
+
+  div.page_header {
+    height: 180px;
+    width: 100%;
+
+    background-color: #F5F6F7;
+  }
+
+  div.page_header span {
+    margin: 15px 0px 0px 50px;
+
+    font-size: 180%;
+    font-weight: bold;
+  }
+
+  div.page_header img {
+    margin: 3px 0px 0px 40px;
+
+    border: 0px 0px 0px;
+  }
+
+  div.banner {
+    padding: 9px 6px 9px 6px;
+    background-color: #E9510E;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    bottom: 30px;
+    width: 20%;
+  }
+
+  div.table_of_contents {
+    clear: left;
+
+    min-width: 200px;
+
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.table_of_contents_item {
+    clear: left;
+
+    width: 100%;
+
+    margin: 4px 0px 0px 0px;
+
+    background-color: #FFFFFF;
+
+    color: #000000;
+    text-align: left;
+  }
+
+  div.table_of_contents_item a {
+    margin: 6px 0px 0px 6px;
+  }
+
+  div.content_section {
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.content_section_text {
+    padding: 4px 8px 4px 8px;
+
+    color: #000000;
+    font-size: 100%;
+  }
+
+  div.content_section_text pre {
+    margin: 8px 0px 8px 0px;
+    padding: 8px 8px 8px 8px;
+
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #000000;
+
+    background-color: #F5F6F7;
+
+    font-style: italic;
+  }
+
+  div.content_section_text p {
+    margin-bottom: 6px;
+  }
+
+  div.content_section_text ul, div.content_section_text li {
+    padding: 4px 8px 4px 16px;
+  }
+
+  div.section_header {
+    padding: 3px 6px 3px 6px;
+
+    background-color: #8E9CB2;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+  }
+
+  div.section_header_grey {
+    background-color: #9F9386;
+  }
+
+  .floating_element {
+    position: relative;
+    float: left;
+  }
+
+  div.table_of_contents_item a,
+  div.content_section_text a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  div.table_of_contents_item a:link,
+  div.table_of_contents_item a:visited,
+  div.table_of_contents_item a:active {
+    color: #000000;
+  }
+
+  div.table_of_contents_item a:hover {
+    background-color: #000000;
+
+    color: #FFFFFF;
+  }
+
+  div.content_section_text a:link,
+  div.content_section_text a:visited,
+   div.content_section_text a:active {
+    background-color: #DCDFE6;
+
+    color: #000000;
+  }
+
+  div.content_section_text a:hover {
+    background-color: #000000;
+
+    color: #DCDFE6;
+  }
+
+  div.validator {
+  }
       .comand{
-        background: black;
+        background: #280801;
         color: #DAA520;
         font-size: 16px;
         padding: 16px;
         width: fit-content;
+        min-width: 70%;
         font-wheight: bold;
         font-family: Arial, Helvetica, sans-serif;
       }
@@ -27,9 +242,52 @@
         padding: 16px;
         width: fit-parent;
       }
+      .tab-1 {
+        padding-left: 2.8%;
+      }
+      .tab-2 {
+        padding-left: 5.6%;
+      }
+      .tab-3 {
+        padding-left: 8.4%;
+      }
+      .tab-4 {
+        padding-left: 11.2%;
+      }
+      .tab-5 {
+        padding-left: 14%;
+      }
+      
+      
+      #phpinfo table {border-collapse: collapse; border: 0; width: 934px; box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);}
+      div.phpinfo .center {text-align: center;}
+      div.phpinfo .center table {margin: 1em auto; text-align: left;}
+      div.phpinfo .center th {text-align: center !important;}
+      div.phpinfo  td, th {border: 1px solid #666; font-size: 75%; vertical-align: baseline; padding: 4px 5px;}
+      div.phpinfo th {position: sticky; top: 0; background: inherit;}
+      #phpinfo h1 {font-size: 150%;}
+      #phpinfo h2 {font-size: 125%;}
+      #phpinfo h2 a:link, h2 a:visited{color: inherit; background: inherit;}
+      div.phpinfo .p {text-align: left;}
+      div.phpinfo .e {background-color: #ccf; width: 300px; font-weight: bold;}
+      div.phpinfo .h {background-color: #99c; font-weight: bold;}
+      div.phpinfo .v {background-color: #ddd; max-width: 300px; overflow-x: auto; word-wrap: break-word;}
+      div.phpinfo .v i {color: #999;}
+      div.phpinfo img {float: right; border: 0;}
+      div.phpinfo hr {width: 934px; background-color: #ccc; border: 0; height: 1px;}
+      div.phpinfo:root {--php-dark-grey: #333; --php-dark-blue: #4F5B93; --php-medium-blue: #8892BF; --php-light-blue: #E2E4EF; --php-accent-purple: #793862}@media (prefers-color-scheme: dark) {
+          body {background: var(--php-dark-grey); color: var(--php-light-blue)}
+         .h td, td.e, th {border-color: #606A90}
+         td {border-color: #505153}
+         .e {background-color: #404A77}
+         .h {background-color: var(--php-dark-blue)}
+         .v {background-color: var(--php-dark-grey)}
+         hr {background-color: #505153}
+      }
     </style>
   </head>
   <body>
+   <div class="content">
     <h1>Install Linux, Apache, MySQL, PHP (LAMP) Stack on Ubuntu</h1>
     <h3>Steps</h3>
     <ol>
@@ -39,7 +297,7 @@
       <li>Install PHP</li>
       <li>Install phpMyAdmin</li>
     </ol>
-    
+    Ref:-<a href="https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu"> click</a>
     <h2>Step 1. Update the system</h2>
     <div class="comand">
         sudo apt <span class="comand-arg">update -y</span> && sudo apt <span class="comand-arg">upgrade -y</span>
@@ -83,6 +341,41 @@
     <div class="comand">
    <span class="comand-arg">Jul 27 20:15:39 host.test.vps systemd[1]: Starting apache2.service - The Apache HTTP Server...</span>
     </div>
+    Use the arrow keys to scroll up and down, and press Q to quit. 
+    <div class="comand-info">
+       To test apache is installed properly, go to your web browser and access your server’s IP address:
+      </div>
+      <div class="comand">http://192.168.109.205/</div>
+      
+       <div class="main_page">
+          <div class="page_header floating_element">
+            <img src="ubuntu-logo.png" alt="Ubuntu Logo"
+                 style="width:184px;height:146px;" class="floating_element" />
+            <div>
+              <span style="margin-top: 1.5em;" class="floating_element">
+                Apache2 Default Page
+              </span>
+            </div>
+            <div class="banner">
+              <div id="about"></div>
+              It works!
+            </div>
+
+          </div>
+          <div class="content_section floating_element">
+            <div class="content_section_text">
+              <p>
+                    This is the default welcome page used to test the correct 
+                    operation of the Apache2 server after installation on Ubuntu systems.
+                    It is based on the equivalent page on Debian, from which the Ubuntu Apache
+                    packaging is derived.
+                    If you can read this page, it means that the Apache HTTP server installed at
+                    this site is working properly. You should <b>replace this file</b> (located at
+                    <tt>/var/www/html/index.html</tt>) before continuing to operate your HTTP server.
+              </p>
+            </div>
+          </div>
+      </div>
     </li>
     </ol>
     <hr/>
@@ -128,10 +421,11 @@
     </div>
     <div class="comand">
       <span class="comand-arg">
-       Jul 27 20:40:17 host.test.vps systemd[1]: Starting mysql.service - MySQL Community Server...
-       <div>Jul 27 20:40:18 host.test.vps systemd[1]: Started mysql.service - MySQL Community Server.</div>
+       Jul 27 17:20:17 host.test.vps systemd[1]: Starting mysql.service - MySQL Community Server...
+       <div>Jul 27 17:20:18 host.test.vps systemd[1]: Started mysql.service - MySQL Community Server.</div>
       </span>
     </div>
+    Use the arrow keys to scroll up and down, and press Q to quit. 
     </li>
     </ol>
     <hr/>
@@ -165,13 +459,14 @@
         </div>
         <div class="comand">
           <span class="comand-arg">
-            root@host:~# php -v
-            <div>PHP 8.3.0-1ubuntu1 (cli) (built: Jul 27 2024 14:00:34) (NTS)</div>
+            lamp@lamp:~$ php -v
+            <div>PHP 8.3.6 (cli) (built: Jun 13 2024 15:23:20) (NTS)</div>
             <div>Copyright (c) The PHP Group</div>
-            <div>Zend Engine v4.3.0, Copyright (c) Zend Technologies</div>
-            <div>with Zend OPcache v8.3.0-1ubuntu1, Copyright (c), by Zend Technologies</div>
+            <div>Zend Engine v4.3.6, Copyright (c) Zend Technologies</div>
+            <div class="tab-2">with Zend OPcache v8.3.6, Copyright (c), by Zend Technologies</div>
           </span>
         </div>
+        <div class="comand-info"> Visit <a href="#">Here</a> If you want install multiple version of php.</div>
      </li>
      
     <li>
@@ -196,7 +491,7 @@
         </div><br/>
         <div class="comand-arg">
             <<strong>IfModule</strong> mod_dir.c>
-                <p>  <strong>DirectoryIndex</strong> index.html index.cgi index.pl index.php index.xhtml index.htm</p>
+                <p class="tab-2">  <strong>DirectoryIndex</strong> index.html index.cgi index.pl index.php index.xhtml index.htm</p>
             <<strong>/IfModule</strong>>
         </div>
       </div>
@@ -210,7 +505,7 @@
         </div><br/>
         <div class="comand-arg">
             <<strong>IfModule</strong> mod_dir.c>
-                <p>  <strong>DirectoryIndex</strong> index.php index.html index.cgi index.pl index.xhtml index.htm</p>
+                <p class="tab-2">  <strong>DirectoryIndex</strong> index.php index.html index.cgi index.pl index.xhtml index.htm</p>
             <<strong>/IfModule</strong>>
         </div>
       </div>
@@ -228,8 +523,14 @@
           If everything is OK, you should get output at the end of the line similar to this:
         </div>
         <div class="comand">
-          <span class="comand-arg">Jul 27 16:22:59 ubuntu2404 systemd[1]: Started The Apache HTTP Server.</span>
+          <div class="comand-arg">
+            Jul 28 14:44:28 lamp systemd[1]: Starting apache2.service - The Apache HTTP Server...
+            <br/>Jul 28 14:44:28 lamp apachectl[22479]: AH00558: apache2: Could not reliably determine the server's 
+            fully qualified domain name, using 127.0.1.1. Set 
+            <br/>Jul 28 14:44:28 lamp systemd[1]: Started apache2.service - The Apache HTTP Server.
+          </div>
         </div>
+        Use the arrow keys to scroll up and down, and press Q to quit. 
      </li>
      
      <li>
@@ -242,21 +543,21 @@
        Use the arrow keys to scroll <strong>up</strong> and <strong>down</strong>, and press <strong>Q</strong> to quit.
        
        <div class="comand-info">Alternatively, look at the long description of the package by typing:</div>
-       <div class="comand">apt show  <span class="comand-arg">php-package_name</span> </div>
+       <div class="comand">apt show  <span class="comand-arg">php_package_name</span> </div>
        
        <div class="comand-info">If you decided to install some packege named <strong>package_name</strong>, you could type:</div>
-       <div class="comand">sudo apt install  <span class="comand-arg">php-package_name</span> </div>
+       <div class="comand">sudo apt install  <span class="comand-arg">php_package_name</span> </div>
        
        <div class="comand-info">
         If you want to install more than one module, you can do that by listing each one, separated by a space, following the apt install command, like this:
        </div>
-       <div class="comand">sudo apt install  <span class="comand-arg">php-package1 php-package2 ...</span> </div>
+       <div class="comand">sudo apt install  <span class="comand-arg">php_package1 php_package2 ...</span> </div>
        
        <div class="comand-info">Or symply in a curly bracket separated by comma :</div>
        <div class="comand">sudo apt install  <span class="comand-arg">php-{package1,package2,package3,...}</span> </div>
        
        <div class="comand-info">You can also use a combination of both:</div>
-       <div class="comand">sudo apt install  <span class="comand-arg">php-package1 php-{package2,package3,...}</span> </div>
+       <div class="comand">sudo apt install  <span class="comand-arg">php_package1 php-{package2,package3,...}</span> </div>
        
        <div class="comand-info">For now let's install important packages and extensions:</div>
        <div class="comand">sudo apt install  <span class="comand-arg">php-cli php-{bz2,curl,mbstring,intl} -y</span> </div>
@@ -288,12 +589,12 @@
         </div><br/>
         <div class="comand-arg">
             <<strong>VirtualHost</strong> *:80>
-                  <p> <strong> ServerName</strong> jucavm</p>
-                  <p> <strong> ServerAlias</strong> www.jucavm</p>
-                  <p> <strong> ServerAdmin</strong> webmaster@localhost</p>
-                  <p> <strong> DocumentRoot</strong> /var/www/jucavm</p>
-                  <p> <strong> ErrorLog</strong> ${APACHE_LOG_DIR}/error.log</p>
-                  <p> <strong> CustomLog</strong> ${APACHE_LOG_DIR}/access.log combined</p>
+                  <p class="tab-2"> <strong> ServerName</strong> jucavm</p>
+                  <p class="tab-2"> <strong> ServerAlias</strong> www.jucavm</p>
+                  <p class="tab-2"> <strong> ServerAdmin</strong> webmaster@localhost</p>
+                  <p class="tab-2"> <strong> DocumentRoot</strong> /var/www/jucavm</p>
+                  <p class="tab-2"> <strong> ErrorLog</strong> ${APACHE_LOG_DIR}/error.log</p>
+                  <p class="tab-2"> <strong> CustomLog</strong> ${APACHE_LOG_DIR}/access.log combined</p>
             <<strong>/VirtualHost</strong>>
         </div>
       </div>
@@ -304,7 +605,11 @@
       
       <div class="comand-info">To make sure your new site configuration file doesn’t contain syntax errors, run the following command:</div>
       <div class="comand">sudo apache2ctl configtest</div> 
- 
+     
+     <div class="comand-info">If you’re not using a custom domain name, you need to disable the default website that comes installed with Apache.
+      If not Apache’s default configuration would override your virtual host. To disable Apache’s default website, type:</div>
+      <div class="comand">sudo a2dissite 000-default</div>
+      
       <div class="comand-info">Reload Apache to apply the new configuration changes:</div>
       <div class="comand">sudo systemctl reload apache2</div>
       
@@ -318,14 +623,14 @@
          /var/www/jucavm/index.html
         </div><br/>
         <div class="comand-arg">
-            <html>
-              <head>
-                <title>JUCAVM Website</title>
-              </head>
-              <body>
-                <h1>Hello JUCAVM!</h1>
-              </body>
-            </html>
+            &lt;html&gt;
+             <div class="tab-1"> &lt;head&gt;</div>
+                <div class="tab-2"> &lt;title&gt;JUCAVM Website&lt;/title&gt;</div>
+              <div class="tab-1"> &lt;/head&gt;</div>
+             <div class="tab-1">  &lt;body&gt;</div>
+                <div class="tab-2"> &lt;h1&gt;Hello JUCAVM!&lt;/h1&gt;</div>
+             <div class="tab-1">  &lt;/body&gt;</div>
+            &lt;/html&gt;
         </div>
       </div>
        Save and close the file when you’re done. If you’re using <strong>nano</strong>, do that by pressing <strong>CTRL+X</strong>, then Y and ENTER.
@@ -350,9 +655,9 @@
         </div><br/>
         <div class="comand-arg">
         
-            <?php
+            &lt;?php
               phpinfo();
-            ?>
+            ?&gt;
         </div>
       </div>
        Save and close the file when you’re done. If you’re using <strong>nano</strong>, do that by pressing <strong>CTRL+X</strong>, then Y and ENTER.
@@ -362,7 +667,70 @@
        followed by the script name, which in this case is info.php:
       </div>
       <div class="comand">http://server_domain_or_IP/info.php</div>
-
+      
+<div class="phpinfo" id="phpinfo">
+       <div class="center">
+<table>
+<tr class="h"><td>
+<a href="http://www.php.net/"><img border="0" src="data:image/png;base64,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" alt="PHP logo" /></a><h1 class="p">PHP Version 8.3.6</h1>
+</td></tr>
+</table>
+<table>
+<tr><td class="e">System </td><td class="v">Linux lamp 6.8.0-39-generic #39-Ubuntu SMP PREEMPT_DYNAMIC Fri Jul  5 21:49:14 UTC 2024 x86_64 </td></tr>
+<tr><td class="e">Build Date </td><td class="v">Jun 13 2024 15:23:20 </td></tr>
+<tr><td class="e">Build System </td><td class="v">Linux </td></tr>
+<tr><td class="e">Server API </td><td class="v">Apache 2.0 Handler </td></tr>
+<tr><td class="e">Virtual Directory Support </td><td class="v">disabled </td></tr>
+<tr><td class="e">Configuration File (php.ini) Path </td><td class="v">/etc/php/8.3/apache2 </td></tr>
+<tr><td class="e">Loaded Configuration File </td><td class="v">/etc/php/8.3/apache2/php.ini </td></tr>
+<tr><td class="e">Scan this dir for additional .ini files </td><td class="v">/etc/php/8.3/apache2/conf.d </td></tr>
+<tr><td class="e">Additional .ini files parsed </td><td class="v">/etc/php/8.3/apache2/conf.d/10-mysqlnd.ini,
+/etc/php/8.3/apache2/conf.d/10-opcache.ini,
+/etc/php/8.3/apache2/conf.d/10-pdo.ini,
+/etc/php/8.3/apache2/conf.d/20-bz2.ini,
+/etc/php/8.3/apache2/conf.d/20-calendar.ini,
+/etc/php/8.3/apache2/conf.d/20-ctype.ini,
+/etc/php/8.3/apache2/conf.d/20-curl.ini,
+/etc/php/8.3/apache2/conf.d/20-exif.ini,
+/etc/php/8.3/apache2/conf.d/20-ffi.ini,
+/etc/php/8.3/apache2/conf.d/20-fileinfo.ini,
+/etc/php/8.3/apache2/conf.d/20-ftp.ini,
+/etc/php/8.3/apache2/conf.d/20-gettext.ini,
+/etc/php/8.3/apache2/conf.d/20-iconv.ini,
+/etc/php/8.3/apache2/conf.d/20-intl.ini,
+/etc/php/8.3/apache2/conf.d/20-mbstring.ini,
+/etc/php/8.3/apache2/conf.d/20-mysqli.ini,
+/etc/php/8.3/apache2/conf.d/20-pdo_mysql.ini,
+/etc/php/8.3/apache2/conf.d/20-phar.ini,
+/etc/php/8.3/apache2/conf.d/20-posix.ini,
+/etc/php/8.3/apache2/conf.d/20-readline.ini,
+/etc/php/8.3/apache2/conf.d/20-shmop.ini,
+/etc/php/8.3/apache2/conf.d/20-sockets.ini,
+/etc/php/8.3/apache2/conf.d/20-sysvmsg.ini,
+/etc/php/8.3/apache2/conf.d/20-sysvsem.ini,
+/etc/php/8.3/apache2/conf.d/20-sysvshm.ini,
+/etc/php/8.3/apache2/conf.d/20-tokenizer.ini
+ </td></tr>
+<tr><td class="e">PHP API </td><td class="v">20230831 </td></tr>
+<tr><td class="e">PHP Extension </td><td class="v">20230831 </td></tr>
+<tr><td class="e">Zend Extension </td><td class="v">420230831 </td></tr>
+<tr><td class="e">Zend Extension Build </td><td class="v">API420230831,NTS </td></tr>
+<tr><td class="e">PHP Extension Build </td><td class="v">API20230831,NTS </td></tr>
+<tr><td class="e">Debug Build </td><td class="v">no </td></tr>
+<tr><td class="e">Thread Safety </td><td class="v">disabled </td></tr>
+<tr><td class="e">Zend Signal Handling </td><td class="v">enabled </td></tr>
+<tr><td class="e">Zend Memory Manager </td><td class="v">enabled </td></tr>
+<tr><td class="e">Zend Multibyte Support </td><td class="v">provided by mbstring </td></tr>
+<tr><td class="e">Zend Max Execution Timers </td><td class="v">disabled </td></tr>
+<tr><td class="e">IPv6 Support </td><td class="v">enabled </td></tr>
+<tr><td class="e">DTrace Support </td><td class="v">disabled </td></tr>
+<tr><td class="e">Registered PHP Streams</td><td class="v">https, ftps, compress.zlib, php, file, glob, data, http, ftp, compress.bzip2, phar</td></tr>
+<tr><td class="e">Registered Stream Socket Transports</td><td class="v">tcp, udp, unix, udg, ssl, tls, tlsv1.0, tlsv1.1, tlsv1.2, tlsv1.3</td></tr>
+<tr><td class="e">Registered Stream Filters</td><td class="v">zlib.*, string.rot13, string.toupper, string.tolower, convert.*, consumed, dechunk, bzip2.*, convert.iconv.*</td></tr>
+</table>
+<table>
+</div>
+       
      </li>
      
      <li>
@@ -370,6 +738,6 @@
      </li>
     </ol>
     
-    
+    </div>
   </body>
 </html>
