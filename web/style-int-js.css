@@ -1,0 +1,113 @@
+
+.js-command {
+    font-family: monospace, "Courier New", Courier;
+    font-weight: bold;
+    font-size: medium;
+    color: #CC0000;
+    margin-left: 100px;
+}
+
+.stdout {
+    font-family: monospace, "Courier New", Courier;
+    font-weight: bold;
+    font-size: medium;
+    color: Navy;
+    margin-left: 100px;
+}
+
+.js-code {
+    font-family: monospace, "Courier New", Courier;
+    font-weight: bold;
+    color: #CC0000;
+    font-size: medium;
+}
+
+.sourcecode {
+    font-family: monospace, "Courier New", Courier;
+    border: 1px solid Black;
+    padding: 10px;
+    width: 90%;
+    background: #FFFFCC;
+    color: Black;
+    margin-left: 2%;
+}
+
+.sourcecode li {
+    padding: 4px;
+}
+
+.sourcecode-title {
+    font-family: sans-serif, Verdana, Geneva, Arial, Helvetica;
+    border: 1px solid gray;
+    background: gray;
+    color: white;
+    padding: 8px;
+}
+
+.hint li {
+    padding: 4px;
+}
+
+.content-list {
+    font-size: inherit;
+}
+
+.content-list li {
+    padding: 4px;
+}
+
+.warning {
+    font-family: sans-serif, Verdana, Geneva, Arial, Helvetica;
+    font-weight: bold;
+    color: White;
+    background: #CC0000;
+    border: 1px solid Black;
+    padding: 8px;
+    width: 70%;
+    margin-left: 100px;
+}
+
+.date {
+    font-family: sans-serif, Verdana, Geneva, Arial, Helvetica;
+    font-size: smaller;
+    color: White;
+    background-color: Black;
+    text-align: right;
+    padding: 3px;
+    border: 1px solid White;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.navbar {
+    text-align: center;
+    text-decoration: none;
+    border: 0px none;
+    color: White;
+}
+
+table.lesson {
+    margin: 2%;
+    width: 96%;
+}
+
+th.lesson-left {
+    float: left;
+    text-align: left;
+}
+
+th.lesson-right {
+    float: right;
+    text-align: left;
+    padding-right: 3%;
+}
+
+div.center-img{
+	width: 70%;
+	margin-left: 15%;
+}
+
+ul.plist{
+	padding: 4px;
+}
