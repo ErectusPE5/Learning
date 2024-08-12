@@ -1,0 +1,1065 @@
+<html>
+<head>
+<title>WordPress</title>
+<link rel="stylesheet" href="prism.css">
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+.html-command {
+	font-family: monospace, "Courier New", Courier;
+	font-weight: bold;
+	font-size: medium;
+	color: #CC0000;
+	margin-left: 100px;
+}
+
+.stdout {
+	font-family: monospace, "Courier New", Courier;
+	font-weight: bold;
+	font-size: medium;
+	color: Navy;
+	margin-left: 100px;
+}
+
+.html-code {
+	font-family: monospace, "Courier New", Courier;
+	font-weight: bold;
+	color: #CC0000;
+	font-size: medium;
+}
+
+.sourcecode {
+	font-family: monospace, "Courier New", Courier;
+	border: 1px solid Black;
+	padding: 10px;
+	width: 90%;
+	background: #FFFFCC;
+	color: Black;
+	margin-left: 2%;
+}
+
+.sourcecode li {
+	padding: 4px;
+}
+
+.sourcecode-title{
+    font-family : sans-serif, Verdana, Geneva, Arial, Helvetica;
+    border : 1px solid gray;   
+    background: gray;
+    color: white;
+    padding : 8px;
+}
+.content-list {
+	font-size: inherit;
+}
+
+.content-list li {
+	padding: 4px;
+}
+
+.warning {
+	font-family: sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-weight: bold;
+	color: White;
+	background: #CC0000;
+	border: 1px solid Black;
+	padding: 8px;
+	width: 70%;
+	margin-left: 100px;
+}
+
+.date {
+	font-family: sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-size: smaller;
+	color: White;
+	background-color: Black;
+	text-align: right;
+	padding: 3px;
+	border: 1px solid White;
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.navbar {
+	text-align: center;
+	text-decoration: none;
+	border: 0px none;
+	color: White;
+}
+table.lesson{
+    margin: 2%;
+    width: 96%;
+    background: #f8f8f8;
+}
+
+th.lesson-left{
+   float: left; 
+   text-align: left;
+}
+
+th.lesson-right{
+   float: right;
+   text-align: left; 
+   padding-right: 3%;
+}
+</style>
+<script src="prism.js"></script>
+</head>
+<body>
+	<div class="content">
+		<h1>Web Design - HTML</h1>
+		<table class="lesson">
+		  <tr>
+		      <th class="lesson-left">		          
+			        <h3>HTML</h3>
+			        <ol>
+			            <li>Standards and Tools</li>
+			            <li><a href="introduction-html.html">HTML</a></li>
+			            <li><a href="introduction-css.html">CSS</a></li>
+			            <li><a href="introduction-javascript.html">JavaScript</a></li>
+			            <li>Frameworks and Libraries</li>
+			            <li>Homeworks</li>
+			
+			        </ol>
+		      </th>
+              <th class="lesson-right">                
+                    <h3>Web Design</h3>
+                    <ol>
+                        <li>Standards and Tools</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li><a href="introduction-javascript.html">JavaScript</a></li>
+                        <li>Frameworks and Libraries</li>
+                        <li>Homeworks</li>
+            
+                    </ol>
+              </th>
+		  </tr>
+		</table>
+		<ul>
+			<Links:->Links</Links:->
+		</ul>
+		<hr />
+
+		<h2>Lesson 1:- Standards and Tools</h2>
+		<p>This book is a tutorial. It aims to help you gradually learn
+			the web technologies. But once you are familiar with the basics, you
+			all need other resources.</p>
+		<ol>
+			<li class="sub-head-1">Specification</li>
+		</ol>
+		<hr />
+
+
+		<h2>Lesson 2:- HTML</h2>
+		<p>
+			Web Pages are coded in <strong>HTML</strong>. <strong>HTML</strong>
+			documents are stored on the web server and are downloaded as part of
+			a response to a request from the client.
+		</p>
+		<p>
+			<strong>HTML</strong> stands for <strong>H</strong>yper <strong>T</strong>ext
+			<strong>M</strong>arkup <strong>L</strong>anguage and is used to
+			create hypertext documents that are platform independent. An <strong>HTML</strong>
+			document is a text file that contains the elements a browser uses to
+			display text, multimedia objects, and hyperlinks. A hyper link
+			connects one document to another document. Hyper links in text are
+			easy to spot because they are usually underlined and a different
+			color from the rest of the text.
+		</p>
+		<p>A markup language is a language that has codes for indicating
+			layout and styling (such as boldface, italics, paragraphs, placement
+			of graphics, etc.) within a text file. Markup language is entirely
+			different from a programming language.</p>
+		<p>
+			<strong>HTML</strong> is derived from Standard Generalized Markup
+			Language (SGML). SGML is a language used to define other languages.
+		</p>
+		<p>
+			Tim Berners-Lee invented the World Wide Web, <strong>HTML</strong>,
+			HTTP and Universal Resource Locators (URLs). He is currently the
+			director of the World Wide Web Consortium(W3C) the group that sets
+			technical standards for the Web.
+		</p>
+		<div class="hint">
+			<ul type="square">
+				<li><strong>HTML</strong> tags are not case sensitive, <code
+						class="language-html">&lt;body&gt; </code> means the same as <code
+						class="language-html">&lt;BODY&gt;</code></li>
+				<li><strong>HTML</strong> using ASCII (plain text) format ,
+					hence platform independent</li>
+				<li><strong>HTML</strong> is interpreted by the browser, not
+					like other programming languages.</li>
+				<li><strong>HTML</strong> form elements are used to create a
+					GUI.</li>
+			</ul>
+		</div>
+
+
+
+		<ol class="sub-head-1">
+			<li>
+				<div class="sub-head-1">
+					<strong>HTML</strong> tags and attributes
+				</div>
+				<p>
+					An <strong>HTML</strong> file contains markup tags that tell the
+					browser how to display the page. <strong>HTML</strong> tags are
+					used to mark the elements of a document for your browser. These
+					elements could be headings, tables, lists etc. and can contain
+					plain text, other elements, or both.
+				</p>
+				<div class="hint">
+					<ul type="disc">
+						<li>Tags are consist of a left angle bracket <code
+								class="language-html">(&lt;)</code>, a tag name, and a right
+							angle bracket <code class="language-html">(&gt;)</code>.
+						</li>
+						<li>Tags could be paired (e.g. the header1 tag:- <code
+								class="language-html">&lt;H1&gt;</code> and <code
+								class="language-html">&lt;/H1&gt;</code>) to start and end the
+							tag instruction. These are called container tags
+						</li>
+						<li>Some tags don't need to have the closing part - these are
+							called empty tags e.g. <code class="language-html">&lt;BR&gt;</code>
+						</li>
+					</ul>
+				</div>
+				<p>
+					Many <strong>HTML</strong> tags also have attributes assigned to
+					them. An attribute is an additional feature you can use to
+					configure the element. For example,
+					<code class="language-html">&lt;H1&gt;</code>
+					tag can also have an attribute
+					<code class="language-html">&#34;ALIGN&#34;</code>
+					assigned to it, so that
+					<code class="language-html">&lt;H1 ALIGN =
+						&#34;CENTER&#34;&gt;</code>
+					will generate a center aligned heading. Attributes are optional,
+					can be used depending on how you want to modify the tag. Attributes
+					always come in name/value pairs like this:
+					<code class="language-html">name=&#34;value&#34;</code>
+					and are added to the start tag of an HTML element.
+				</p>
+			</li>
+			<li>
+				<div class="sub-head-1">Structure of HTML Document &lt;&gt;</div> <pre>
+<code class="language-html">
+&lt;html&gt;
+	&lt;head&gt; &lt;!-- Head Section --&gt;
+		&lt;title&gt; Title of the Web Page &lt;/title&gt;		
+	&lt;/head&gt;
+	&lt;body&gt; &lt;!-- Body Section --&gt;
+		&lt;!-- Contents on Web Page first.html --&gt;
+		&lt;h1&gt;Contents&lt;/h1&gt;
+	&lt;/body&gt;			
+&lt;html&gt;			
+</code>
+</pre>
+				<p>
+					Every <strong>HTML</strong> program or document has a rigid
+					structure. The entire web page is enclosed within the
+					<code class="language-html">&lt;HTML&gt; &lt;/HTML&gt;</code>
+					tag. Within this tag, two distinct sections, head and body are
+					created. These sections are as described below.
+				<ol type="A" class="sub-head-2">
+					<li>
+						<div class="sub-head-2">Document Head</div>
+						<p>
+							The text between the
+							<code class="language-html">&lt;HEAD&gt;</code>
+							tag and the
+							<code class="language-html">&lt;/HEAD&gt;</code>
+							tag is header information. Header information is not displayed in
+							the browser window, it is necessary for the internal working of
+							the document. An exception to this is the
+							<code class="language-html">&lt;TITLE&gt; &lt;/TITLE&gt;</code>
+							tag, which displays the document title in the browser’s title
+							bar.
+						</p>
+						<div class="content-list">
+							Other tags that can go in the document head
+							<ul type="disc">
+								<li><code class="language-html">&lt;BASE&gt;</code> element
+									specifies an absolute URL address that is used to provide
+									server and directory information for partially specified URL
+									address called relative address. e.g: <code
+										class="language-html"> &lt;BASE HREF =
+										&#34;http://www.inf.com/file.html&#34; &gt; </code></li>
+								<li><code class="language-html">&lt;META&gt;</code> element
+									uses name value pairs to provide meta information about the
+									document. It often provides descriptive information that is
+									targeted by search engines.
+									<div class="sourcecode">
+										<strong>Example:-</strong>
+										<ol type="i">
+											<li><code class="language-html"> &lt;META
+													HTTP-EQUIV = &#34;Keywords&#34; CONTENT =&#34;keyword1,
+													keyword2, ...&#34; &gt; </code> To specify keywords for certain
+												search services to use.</li>
+											<li><code class="language-html"> &lt;META
+													HTTP-EQUIV = &#34;Description&#34; CONTENT = &#34;Describe
+													your site here....&#34; &gt; </code> To specify a description of
+												your page for certain search services to use</li>
+											<li><code class="language-html"> &lt;META
+													HTTP-EQUIV = &#34;Expires&#34; CONTENT = &#34;Mon, 29 Jul
+													2024 01:21:00 GMT&#34; &gt; </code> To specify an expiration date
+												for the page so that it will be reloaded after a certain
+												date.</li>
+											<li><code class="language-html"> &lt;META
+													HTTP-EQUIV = &#34;REFRESH&#34; CONTENT=X &gt; </code> To have your
+												page automatically reloaded every X seconds</li>
+										</ol>
+									</div></li>
+								<li><code class="language-html">&lt;LINK&gt;</code>
+									specifies the relationship between the current document and
+									other documents. And in most cases is used in linking external
+									CSS to the current document</li>
+								<li><code class="language-html">&lt;SCRIPT&gt;</code>
+									specifies the client side script name.</li>
+								<li><code class="language-html">&lt;STYLE&gt;</code> To
+									Include CSS (Cascading Style Sheet)</li>
+								<li></li>
+							</ul>
+						</div>
+					</li>
+
+					<li>
+						<div class="sub-head-2">Document Body</div>
+						<p>
+							The
+							<code class="language-html">&lt;BODY&gt;&lt;/BODY&gt;</code>
+							tag encloses the body of the HTML document.
+						</p>
+					</li>
+					<li>
+						<div class="sub-head-2">Comments</div>
+						<p>
+							The
+							<code class="language-html">&lt;!-- --&gt;</code>
+							tag is used to insert a comment in the HTML source code. A
+							comment will be ignored by the browser. Comments can be used to
+							explain your code or earmark the areas that need improvement,
+							which can help you when you edit the source code at a later date.
+							e.g.:
+							<code class="language-html">&lt;!-- This is a comment
+								--&gt;</code>
+						</p>
+					</li>
+				</ol>
+
+				</p>
+			</li>
+
+			<li>
+				<div class="sub-head-1">Formatting the web page</div>
+				<p>
+					Formatting tags are used inside the
+					<code class="language-html">&lt;BODY&gt;</code>
+					of the document to format your text. This is the largest category
+					of tags and you will be using these tags most frequently.
+				</p>
+				<ol type="A" class="sub-head-2">
+					<li>
+						<div class="sub-head-2">Text Formatting tags</div>
+						<ol type="i">
+							<li><strong>Headings</strong>
+								<p>
+									HTML has six levels of headings, numbered 1 through 6, with 1
+									being the largest. Headings are typically displayed in larger
+									and/or bolder fonts than normal body text. The first heading in
+									each document should be tagged
+									<code class="language-html">&lt;H1&gt;</code>
+									. The syntax of the heading element is:
+									<code class="language-html">&lt;Hy&gt;Text of heading
+										&lt;/Hy&gt;</code>
+									where y is a number between 1 and 6. HTML automatically adds an
+									extra blank line before and after a heading.
+								</p></li>
+							<li><strong>Paragraphs</strong> <code class="language-html">
+									&lt;p&gt; --- &lt;/p&gt; </code> - used to create paragraphs.
+								<p>
+									Unlike documents in most word processors, HTML document ignore
+									multiple spaces, tabs and carriage returns. Word wrapping can
+									happen any time in your source file and multiple spaces are
+									collated into a single space. To preserve some text formatting
+									we use the
+									<code class="language-html">&lt;p&gt;</code>
+									tag which created paragraphs. Normally the browser places a
+									blank line before the paragraph.
+								</p></li>
+							<li><strong>Line Breaks</strong> <code class="language-html">
+									&lt;BR&gt; </code> - used to to insert returns or blank lines in the
+								document..
+								<p>
+									e.g. :
+									<code class="language-html"> &lt;p&gt;This &lt;BR&gt; is
+										para&lt;BR&gt;graph with line breaks &lt;/p&gt; </code>
+								</p></li>
+							<li><strong>Horizontal Lines</strong> <code
+									class="language-html"> &lt;HR&gt; </code> -used to draw a
+								horizontal line across the web page.
+								<p>
+									e.g. :
+									<code class="language-html"> &lt;HR ALIGN =
+										&#34;right&#34; WIDTH = &#34;50%&#34; NOSHADE&gt; </code>
+								</p>
+							</li>
+							<li>
+							<strong>Text level elements</strong> - we have two basic flavors which are Physical tags and Logical tags Physical text formatting tags
+							<div class="sourcecode">
+							
+							<strong>Physical formatting tags</strong>
+								<ul type="square">
+								<li> <code class="language-html"> &lt;B&gt;....&lt;/B&gt; </code> - Bold </li>
+								<li> <code class="language-html"> &lt;I&gt;......&lt;/I&gt; </code> - Italic </li>
+								<li> <code class="language-html"> &lt;U&gt;....&lt;/U&gt; </code> - Underline </li>
+								<li> <code class="language-html"> &lt;STRIKE&gt;...&lt;/STRIKE&gt; </code> - Strikethrough </li>
+								<li> <code class="language-html"> &lt;TT&gt;....&lt;/TT&gt; </code> - Typewriter (monospaced) </li>
+								<li> <code class="language-html"> &lt;CENTER&gt; &lt;/CENTER&gt; </code> - Centers the text on the screen. </li>
+								<li> <code class="language-html"> &lt;SUB&gt;....&lt;/SUB&gt; </code> - Subscript </li>
+								<li> <code class="language-html"> &lt;SUP&gt;....&lt;/SUP&gt; </code> - Superscript </li>
+								<li> <code class="language-html"> &lt;BIG&gt;....&lt;/BIG&gt; </code> - Bigger font (one font size bigger) </li>
+								<li> <code class="language-html"> &lt;SMALL&gt;....&lt;/SMALL&gt; </code> - Small font (one font size smaller) </li>
+							 </ul>
+							</div>
+							<div class="sourcecode">
+							     <strong>Logical text formatting tags</strong>
+							     <p>
+                                The formatting of this logical unit may in some cases be the same as produced by other formatting tags. Remember, the tags specify logical units of the document, software other than the web browser may need this information.
+                                </p>
+								<ul type="square"> 
+									<li> <code class="language-html"> &lt;DFN&gt; </code>  - A definition
+									<li> <code class="language-html"> &lt;CODE&gt; </code>  - Represents computer code
+									<li> <code class="language-html"> &lt;KBD&gt; </code>  - keyboard characters
+									<li> <code class="language-html"> &lt;VAR&gt; </code>  - Program variable
+									<li> <code class="language-html"> &lt;CITE&gt; </code>  - A citation
+									<li> <code class="language-html"> &lt;EM&gt; </code>  - Emphasized
+									<li> <code class="language-html"> &lt;STRONG&gt; </code>  - Strongly emphasized
+								</ul>
+						  </div>
+						</li>
+						</ol>
+					</li>
+				</ol>
+
+                <p>The following example shows the basic use of the  text formatting tags:</p>
+<pre>
+<code class="language-html">
+&lt;HTML&gt;
+    &lt;HEAD&gt; &lt;!-- Head Section --&gt;
+        &lt;TITLE&gt; Text Formating Tags &lt;/TITLE&gt;      
+    &lt;/HEAD&gt;
+    &lt;BODY BGCOLOR=&#34;#FFFFFF&#34; TEXT=&#34;red&#34;  
+        &lt;H1 ALIGN ="center"&gt; Physical tags  &lt;/H1&gt;
+        &lt;HR&gt;
+        This is  &lt;B&gt; bold  &lt;/B&gt;  &lt;BR&gt;
+        This is  &lt;I&gt; Italic  &lt;/I&gt;  &lt;BR&gt;
+        This is  &lt;U&gt; underline  &lt;/U&gt;  &lt;BR&gt;
+        This is  &lt;TT&gt; Monospaced  &lt;/TT&gt;  &lt;BR&gt;
+        This is  &lt;STRIKE&gt; Strike-through  &lt;/STRIKE&gt;  &lt;BR&gt;
+        This is  &lt;S&gt;Strike-through  &lt;/S&gt;  &lt;BR&gt;
+        This is  &lt;BIG&gt; Big &lt;/BIG&gt;  &lt;BR&gt;
+        This is even &lt;BIG&gt; &lt;BIG&gt; Bigger &lt;/BIG&gt; &lt;/BIG&gt; &lt;BR&gt;
+        This is  &lt;SMALL> small &lt;/SMALL&gt;  &lt;BR&gt;
+        This is even &lt;SMALL&gt; &lt;SMALL&gt; smaller &lt;/SMALL&gt; &lt;/SMALL&gt; &lt;BR&gt;
+        This is &lt;SUP&gt; superscript &lt;/SUP&gt; &lt;BR&gt;
+        This is  &lt;SUB&gt; subscript &lt;/SUB&gt; &lt;BR&gt;
+    &lt;/BODY&gt;
+ &lt;/HTML&gt;
+</code>
+</pre>
+            <P></P>
+			</li>
+
+			<li><div class="sub-head-1">Linking the web page</div>
+			    <pre>
+			    <code class="language-html"> 
+			             &lt;!-- Used to link document pages --&gt;  
+                    &lt;A HREF=&#34;next-page.html&#34; &gt; Click hear &lt;A&gt; 
+                    
+				        &lt;!-- Used to link text with same documents --&gt;  
+				    &lt;BODY link=&#34;blue&#34; alink=&#34;green&#34; vlink=&#34;red&#34;&gt; 
+				        &lt;A name=&#34;top&#34;&gt; Top of the Page &lt;/A&gt;
+				        ............................................................
+				        &lt;A href=&#34;#top&#34;&gt;Top&lt;/A&gt; 
+				    &lt;/BODY&gt;
+                </code>			    
+			    </pre>
+				<p>A link is a unidirectional pointer from a source document
+					that contains the link to the some destination. Links help the user
+					to navigate across pages as well as within a page. The text or an
+					image that provides such link(s) is called hypertext or hyperlink.</p>
+				<div class="hint">
+					<div class="sourcecode-title">Hyperlinks can be created by using a
+					<code class="language-html"> &lt;A&gt;</code>
+					tag, which stands for anchor and has the following attributes.
+					</div>
+					   <ul type="square"> 
+						   <li> <strong>HREF</strong> 
+						       - Hypertext Reference: This attribute points the link to a bookmark, another file, either within the same webs site or elsewhere on the internet.
+	                        </li>
+                            <li> <strong>NAME</strong>
+                            - Name: The name of the bookmark. This attribute lets you “bookmark” a location on the web page. An HREF anchor can point  a link to that area on the page.
+                            </li>
+                           <li> <strong>TITLE</strong> - Displays balloon help in IE</li>
+                           <li> <strong>TARGET</strong>
+                             - With the target attribute, you can define where the linked document will be opened.
+                            </li>
+                        </ul>
+				</div>
+				
+				<p>You can use HREF to point to a URL and allow the reader to
+					view the page from the beginning. Or, you can use HREF to point to
+					a specific area of that page, indicated by a NAME bookmark, so that
+					the user goes straight to that section of the document.</p>
+			
+			    <div class="hint">
+                    <div class="sourcecode-title">
+                        <strong>Formatting the Link</strong> The following attributes of  <code class="language-html">&lt;BODY&gt;</code> tag is used to provide color for the link.
+                    </div>
+                    <ul type="square"> 
+                        <li><strong>LINK</strong> - Specifies the link color.</li>
+                        <li><strong>VLINK</strong> - Specifies the visited link color</li>
+                        <li><strong>ALINK</strong> - Specifies the active link color.</li>
+                    </ul>
+                </div>
+
+
+			</li>
+
+			<li><div class="sub-head-1">List</div>
+			    <p>
+			     HTML has many ways to format lists information. Lists actually require two tags:The list tag itself, and the tag or tags used to define individual list items. 
+			     We have two types of list formatting available.
+			    </p>
+			    <ol type="A" class="sub-head-2">
+                    <li><div class="sub-head-2">Unordered List</div>
+                      <pre>
+                        <code class="language-html">
+			                &lt;ul type=&#34;square&#34;&gt;       
+			                    &lt;li&gt;Item one&lt;/li&gt;    
+			                    &lt;li&gt;Item two&lt;/li&gt;           
+			                    &lt;li&gt;Item three&lt;/li&gt;        
+			                &lt;/ul&gt;   
+			                &lt;!--  
+			                    type - Controls the bulleting scheme to be used 
+			                    the value of type can be 
+			                         type=&#34;circle&#34; 
+			                         type=&#34;disc&#34;
+			                         type=&#34;square&#34;
+			                --&gt;
+                        </code>
+                      </pre>
+                    </li>
+                    <li><div class="sub-head-2">Ordered List</div>
+                      <pre>
+                        <code class="language-html">
+                            &lt;ol type=&#34;1&#34;&gt;       
+                                &lt;li&gt;Item one&lt;/li&gt;    
+                                &lt;li&gt;Item two&lt;/li&gt;           
+                                &lt;li&gt;Item three&lt;/li&gt;        
+                            &lt;/ol&gt;   
+                            &lt;!--  
+                                type - Controls the numbering scheme to be used 
+                                the value of type can be 
+                                     type=&#34;1&#34; will give counting numbers (1, 2, 3,...)
+                                     type=&#34;A&#34; will give uppercase letters (A, B, C,...)
+                                     type=&#34;a&#34; will give lowercase letters (a, b, c,...)
+                                     type=&#34;I&#34; will give uppercase Roman numerals (I, II, III,...) 
+                                     type=&#34;i&#34; will give lowercase Roman numerals (i, ii, iii,...)
+                                     type=&#34;&#34;
+                                     type=&#34;&#34;
+                            --&gt;
+                            
+                            
+                            &lt;!-- 
+                                START - Alters the numbering sequence. 
+                                Can be set to any value 
+                            --&gt; 
+                            &lt;ol start=&#34;7&#34;&gt;       
+                                &lt;li&gt;Item seven&lt;/li&gt;    
+                                &lt;li&gt;Item eight&lt;/li&gt;           
+                                &lt;li&gt;Item nine&lt;/li&gt;        
+                            &lt;/ol&gt;  
+                            
+                            
+                            &lt;!-- 
+                                VALUE - Can be set with the &lt;li&gt;tag to changes 
+                                the numbering sequence in the middle of an ordered list.  
+                            --&gt;
+                            &lt;ol type=&#34;1&#34;&gt;       
+                                &lt;li&gt;Item one&lt;/li&gt;    
+                                &lt;li value=&#34;4&#34;&gt;Item four&lt;/li&gt;           
+                                &lt;li&gt;Item five&lt;/li&gt;        
+                            &lt;/ol&gt;  
+                            
+                        </code>
+                      </pre>
+                    
+                    </li>
+                </ol>
+			    
+			    
+			</li>
+
+			<li><div class="sub-head-1">Table</div>
+			  <p>
+			     Tables can be used not only to display tabular data but also to position the contents of the page in a more structured manner. 
+			     The page layout can be controlled very effectively with tables. 
+			     Tables are defined with the <code class="language-html">&lt;table&gt;</code> tag.
+			  </p>
+			  <div class="hint">
+                    <div class="sourcecode-title">
+                        <strong>Note:</strong> Tables are used on websites for two major purposes.
+                    </div>
+                    <ol type="1"> 
+                        <li>The primary purpose of arranging information in a table</li>
+                        <li>The more widely used purpose of creating a page layout with the use of hidden tables. 
+                        (border attribute values set to &#34;0&#34;).</li>
+                    </ol>
+             </div>
+             
+             <p><strong>The Attributes and it values</strong></p>
+             <div class="hint">
+                <ul type="square">
+                  <li><strong>ALIGN</strong> - Align the table in a web page. (LEFT | RIGHT | CENTER).</li>
+                  <li><strong>BORDER</strong> - Specifies the thickness of the border</li>
+                  <li><strong>BGCOLOR</strong> - The background color for the table.</li>
+                  <li><strong>CELLPADDING</strong> - Specifies the space between the cell wall and contents .</li>
+                  <li><strong>CELLSPACING</strong> - Specifies the space between cell.</li>
+                  <li><strong>WIDTH</strong> - Specifies the width of the table</li>
+                </ul>
+                <div class="sourcecode-title">
+                    The WIDTH attribute value can be in percent (or) pixels. Pixels can be thought of as the smallest
+                    logical unit for display. Pixel resolution can vary from PC to PC. Tables built with percents will
+                    occupy that percentage of the browser’s visible area or the container area.
+                </div>
+             </div>
+
+             <ol class="sub-head-2">
+                    <li><div class="sub-head-2">Table structure</div>
+                    <pre>
+                        <code class="language-html">
+			                &lt;TABLE BORDER=1&gt; &lt;!-- start of table definition --&gt;
+			                    &lt;CAPTION&gt; caption contents &lt;/CAPTION&gt; &lt;!--caption definition --&gt;
+			                    &lt;THEAD&gt;
+									&lt;TR&gt; &lt;!-- start of header row definition --&gt;
+									   &lt;TH&gt; first header cell contents &lt;/TH&gt;
+									   &lt;TH&gt; last header cell contents &lt;/TH&gt;
+									&lt;/TR&gt; &lt;!-- end of header row definition --&gt;
+								&lt;/THEAD&gt;
+								&lt;TBODY&gt;
+									&lt;TR&gt; &lt;!-- start of first row definition --&gt;
+									   &lt;TD&gt; first row, first cell contents &lt;/TD&gt;
+									   &lt;TD&gt; first row, last cell contents &lt;/TD&gt;
+									&lt;/TR&gt; &lt;!-- end of first row definition --&gt;
+									&lt;TR&gt; &lt;!-- start of last row definition --&gt;
+									   &lt;TD&gt; last row, first cell contents &lt;/TD&gt;
+									   &lt;TD&gt; last row, last cell contents &lt;/TD&gt;
+									&lt;/TR&gt; &lt;!-- end of last row definition –&gt;
+								&lt;/TBODY&gt;
+							&lt;/TABLE&gt; &lt;!-- end of table definition --&gt;
+					</code>
+					</pre>
+                </li>
+                <li><div class="sub-head-2">Table formating</div>
+                    <pre>
+                        <code class="language-html">
+                &lt;table border=1 cellspacing=1 cellpadding=1 width=70% bgcolor=gray&gt; &lt;!-- start of table definition --&gt;
+                    &lt;caption&gt; caption contents &lt;/caption&gt; &lt;!--caption definition --&gt;
+                    &lt;thead&gt;
+                        &lt;tr align=center&gt; &lt;!-- start of header row definition --&gt;
+                            &lt;th colspan=3&gt; The header spans 3 columns  &lt;/th&gt;
+                        &lt;/tr&gt; &lt;!-- end of header row definition --&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr align=center&gt; &lt;!-- start of first row definition center alignment of cells--&gt;
+                            &lt;td colspan=2&gt; This cell spans 2 columns! &lt;/td&gt;
+                            &lt;td&gt; has no span column &lt;/td&gt;
+                        &lt;/tr&gt; &lt;!-- end of first row definition --&gt;
+                        &lt;tr align=center&gt; &lt;!-- start of second row definition --&gt;
+                            &lt;td rowspan=3&gt; This cell spans 3 rows!! &lt;/td&gt;
+                            &lt;td&gt; row-2 col-2 &lt;/td&gt;
+                            &lt;td&gt; row-2 col-3 &lt;/td&gt;
+                        &lt;/tr&gt; &lt;!-- end of first row definition –&gt;
+                        &lt;tr align=center&gt; &lt;!-- start of third row definition --&gt;
+                            &lt;td&gt; row-3 col-2 &lt;/td&gt;
+                            &lt;td&gt; row-3 col-3 &lt;/td&gt;
+                        &lt;/tr&gt; &lt;!-- end of third row definition –&gt;
+                        &lt;tr align=center&gt; &lt;!-- start of fourth row definition --&gt;
+                            &lt;td&gt; row-4 col-2 &lt;/td&gt;
+                            &lt;td&gt; row-4 col-3 &lt;/td&gt;
+                        &lt;/tr&gt; &lt;!-- end of fourth row definition –&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt; &lt;!-- end of table definition --&gt;
+                    </code>
+                    </pre>
+                    
+                    
+                </li>
+            </ol>
+
+
+
+
+			</li>
+
+            <li><div class="sub-head-1">Media Files</div>
+            </li>
+
+			<li><div class="sub-head-1">Form</div>
+                <p>Form elements allow the user to enter information (like text fields, textarea fields, drop-down menus, radio buttons, checkboxes, etc.) in a form.</p>
+                <p>A form in HTML is enclosed between the <code class="language-html"> &lt;/form&gt; and &lt;/form&gt;</code> tags.</p>
+                <p>
+                    Forms become a powerful tool when connected to a server application. When the user clicks on the submit button the web browser transmits all the information in the fields to
+                    the server and server side program is invoked.
+                    <strong>PHP, JSP, ASP</strong> are amoung them
+                </p>
+                <ol class="sub-head-2">
+                    <li><div class="sub-head-2">Form structure</div>
+                    <pre>
+                        <code class="language-html">
+          &lt;form name=&#34;profile&#34; action=&#34;profile.php&#34; method=GET&gt;
+            &lt;!--  
+            NAME - is used for future manipulation of data by scripting language
+            ACTION - indicates a program on the server that will be executed when 
+                     this form is submitted. Mostly it will be a PHP or a JSP script.
+            METHOD - indicates the way the form is submitted to the server - popular 
+                     options are GET/POST 
+            --&gt;
+            
+            (form elements go here)
+            
+          &lt;/form&gt;
+                        </code>
+                    </pre>
+                      <div class="hint">
+                        <div class="sourcecode-title">
+                            The differences between the two methods of submitting data GET/POST 
+                            are summarized below:
+                        </div>
+                        <strong>GET method.</strong>
+                        <ol type="1"> 
+                            <li>The GET method is the default method for browsers to submit information.</li>
+                            <li>GET is easy to deal and fast.</li>
+                            <li>All the information form the form is appended onto the end of the URL.</li>
+                            <li>It is not secure because the data input appears in the URL.</li>
+                            <li>Most browsers limit a URL to several thousand characters.</li>
+                        </ol>
+                        <strong>POST method.</strong>
+                        <ol type="1"> 
+                            <li>Used to pass large amount of information to the server.</li>
+                            <li>Contents are sent with HTTP request body not with URL.</li>
+                        </ol>
+                      </div>
+                    </li>
+                    <li><div class="sub-head-2">Form elements</div>
+                        <div class="sourcecode">
+                                 <strong>Syntax</strong>
+        <pre>
+        &lt;INPUT-TYPE 
+                    NAME = &#34;controlname&#34; 
+                    TYPE = &#34;text / password / checkbox / radio/ submit / reset / button / hidden / file&#34;
+                    VALUE
+                    MAXLENGTH
+                    SIZE
+                    PLACEHOLDER
+        &gt;
+         &lt;!-- optional --&gt;
+        &lt;INPUT-TYPE&gt;
+       </pre>
+                        </div>
+                        <p>
+                         A form is made up of fields or controls. Form controls include text fields,
+                            password fields, multiline text fields, scroll lists etc.
+                            All form elements should be enclosed in &lt;/form&gt; and &lt;/form&gt; tag.
+                        </p>
+                        
+<ol>
+    <li class="sourcecode">
+        <strong>Text Box</strong>
+        <pre>
+        <strong>&lt;INPUT</strong> 
+                    <strong>TYPE</strong> = &#34;text&#34;
+                    <strong>NAME</strong> = &#34;controlname&#34; 
+                    <strong>VALUE</strong>= &#34;default value if it has&#34;
+                    <strong>MAXLENGTH</strong>= &#34;maximum number of characters that can be entered to the control.&#34;
+                    <strong>SIZE</strong>=&#34;sets the size of the field in no. of characters.&#34;
+                    <strong>PLACEHOLDER</strong>=&#34;some information about the input user shall to know&#34;
+        <strong>/&gt;</strong>
+        <INPUT 
+                    TYPE = "text"
+                    NAME = "controlname" 
+                    VALUE= ""
+                    MAXLENGTH= "45"
+                    SIZE="40"
+                    PLACEHOLDER="Form element text box mxl=45, size=40"
+        />
+        </pre>
+        <strong>Password Box</strong>
+        <pre>
+        <strong>&lt;INPUT</strong> 
+                    <strong>TYPE</strong> = &#34;passowrd&#34;
+                    <strong>NAME</strong> = &#34;login&#34; 
+                    <strong>MAXLENGTH</strong>= &#34;maximum number of characters that can be entered to the control.&#34;
+                    <strong>SIZE</strong>=&#34;sets the size of the field in no. of characters.&#34;
+                    <strong>PLACEHOLDER</strong>=&#34;some information about the input user shall to know&#34;
+        <strong>/&gt;</strong>
+        <INPUT 
+                    TYPE = "password"
+                    NAME = "controlname" 
+                    VALUE= ""
+                    MAXLENGTH= "45"
+                    SIZE="40"
+                    PLACEHOLDER="Form element password box mxl=45, size=40"
+        />
+        </pre>
+    </li>
+    <li class="sourcecode">
+        <strong>Textarea Box</strong>
+        <pre>
+        <strong>&lt;TEXTAREA</strong> 
+                <strong>NAME</strong>=&#34;feedback&#34; 
+                <strong>ROWS</strong>=3 
+                <strong>COLS</strong>=40
+                <strong>PLACEHOLDER</strong>=&#34;some information about the input user shall to know&#34;
+                <strong>&gt;</strong> 
+                    Default text goes here  
+        <strong>&lt;/TEXTAREA&gt;</strong>
+        <TEXTAREA 
+                NAME="feedback" 
+                ROWS=3 
+                PLACEHOLDER="Write your feedback hear box row=4 cols=40"
+                COLS=40>Default text goes here  
+        </TEXTAREA>
+        </pre>
+    </li>
+    <li class="sourcecode">
+        <strong>Single Dropdown Select Box</strong>
+        <pre>
+        <strong>&lt;SELECT</strong> <strong>NAME</strong>=&#34;HOBBIES&#34; <strong>&gt;</strong> 
+                    <strong>&lt;OPTION VALUE=&#34;TR&#34;&gt;</strong>Travel
+                    <strong>&lt;OPTION SELECTED&gt;</strong>Reading
+                    <strong>&lt;OPTION&gt;</strong>Sleeping
+                    <strong>&lt;OPTION&gt;</strong>Walking
+        <strong>&lt;/SELECT&gt;</strong>
+         <SELECT 
+                NAME="HOBBIES" 
+                > 
+                    <OPTION VALUE="TR">Travel
+                    <OPTION SELECTED>Reading
+                    <OPTION>Sleeping
+                    <OPTION>Walking
+         </SELECT>
+        </pre>
+        <strong>Multiple Select Box</strong>
+        <pre>
+        <strong>&lt;SELECT</strong> <strong>NAME</strong>=&#34;HOBBIES&#34; <strong>MULTIPLE</strong> <strong>SIZE</strong>=&#34;3&#34; <strong>&gt;</strong> 
+                    <strong>&lt;OPTION VALUE=&#34;TR&#34;&gt;</strong>Travel
+                    <strong>&lt;OPTION SELECTED&gt;</strong>Reading
+                    <strong>&lt;OPTION&gt;</strong>Sleeping
+                    <strong>&lt;OPTION&gt;</strong>Walking
+        <strong>&lt;/SELECT&gt;</strong>
+         <SELECT NAME="HOBBIES" MULTIPLE SIZE="3" > 
+                    <OPTION VALUE="TR">Travel
+                    <OPTION SELECTED>Reading
+                    <OPTION>Sleeping
+                    <OPTION>Walking
+        </SELECT>
+        </pre>
+    </li>
+    
+    <li class="sourcecode">
+        <strong>Check Box Single</strong>
+        <pre>
+        <strong>&lt;INPUT</strong> 
+                <strong>TYPE</strong> = &#34;checkbox&#34;
+                <strong>NAME</strong> = &#34;WEEKDAY&#34; 
+                <strong>VALUE</strong>= &#34;MONDAY&#34;
+                <strong>CHECKED</strong>
+        <strong>/&gt;</strong>
+        MONDAY:<INPUT 
+                TYPE = "checkbox"
+                NAME = "login" 
+                VALUE= "EMAIL"
+                CHECKED
+        />
+        </pre>
+        <strong>Check Box Grouped</strong>
+        <pre>
+        <strong>&lt;INPUT</strong> 
+                <strong>TYPE</strong> = &#34;checkbox&#34;
+                <strong>NAME</strong> = &#34;WEEKDAY&#34; 
+                <strong>VALUE</strong>= &#34;MONDAY&#34;
+                <strong>CHECKED</strong>
+        <strong>/&gt;</strong>
+        <strong>&lt;INPUT</strong> 
+                <strong>TYPE</strong> = &#34;checkbox&#34;
+                <strong>NAME</strong> = &#34;WEEKDAY&#34; 
+                <strong>VALUE</strong>= &#34;THUSDAY&#34;
+                <strong>CHECKED</strong>
+        <strong>/&gt;</strong>
+        MONDAY: <INPUT 
+                TYPE = "checkbox"
+                NAME = "WEEKDAY" 
+                VALUE= "MONDAY"
+                CHECKED
+        />
+        THUSDAY:<INPUT 
+                TYPE = "checkbox"
+                NAME = "WEEKDAY" 
+                VALUE= "THUSDAY"
+                CHECKED
+        />
+        </pre>
+    </li>
+    
+    <li class="sourcecode">
+        <strong>Radio Box </strong>
+        <pre>
+        <strong>&lt;INPUT</strong> 
+                <strong>TYPE</strong> = &#34;radio&#34;
+                <strong>NAME</strong> = &#34;GENDER&#34; 
+                <strong>VALUE</strong>= &#34;MALE&#34;
+                <strong>CHECKED</strong>
+        <strong>/&gt;</strong>
+        <strong>&lt;INPUT</strong> 
+                <strong>TYPE</strong> = &#34;radio&#34;
+                <strong>NAME</strong> = &#34;GENDER&#34; 
+                <strong>VALUE</strong>= &#34;FEMALE&#34;
+                <strong>CHECKED</strong>
+        <strong>/&gt;</strong>
+        MALE:  <INPUT 
+                TYPE = "radio"
+                NAME = "GENDER" 
+                VALUE= "MALE"
+                CHECKED
+        />
+        FEMALE:<INPUT 
+                TYPE = "radio"
+                NAME = "GENDER" 
+                VALUE= "FEMALE"
+                CHECKED
+        />
+        </pre>
+    </li>
+    
+    <li class="sourcecode">
+        <strong>The File Control </strong>
+        <pre>
+        <strong>&lt;INPUT</strong> 
+                <strong>TYPE</strong> = &#34;file&#34;
+                <strong>NAME</strong> = &#34;loead&#34; 
+        <strong>/&gt;</strong>
+         <INPUT 
+                TYPE = "file"
+                NAME = "loead" 
+        />
+        </pre>
+        <strong>The Image Control </strong>
+        <pre>
+        <strong>&lt;INPUT</strong> 
+                <strong>TYPE</strong> = &#34;image&#34;
+                <strong>NAME</strong> = &#34;Photo&#34; 
+                <strong>src</strong>= &#34;photo.png&#34;
+                <strong>alt</strong>= &#34;upload photo&#34;
+        <strong>/&gt;</strong>
+        <INPUT 
+                TYPE = "image"
+                NAME = "Photo" 
+                src= "photo.png"
+                alt= "upload photo"
+        />
+        </pre>
+    </li>
+    
+    
+    <li class="sourcecode">
+        <strong>The Submit Button </strong>
+        <pre>
+        <strong>&lt;INPUT</strong> 
+                <strong>TYPE</strong> = &#34;submit&#34;
+                <strong>NAME</strong> = &#34;submit&#34; 
+                <strong>VALUE</strong>= &#34;Submit&#34;
+        <strong>/&gt;</strong>
+        <INPUT 
+                TYPE = "submit"
+                NAME = "Save" 
+                VALUE= "Submit"
+        />
+        </pre>
+        <strong>The Reset Button </strong>
+        <pre>
+        <strong>&lt;INPUT</strong> 
+                <strong>TYPE</strong> = &#34;reset&#34;
+                <strong>NAME</strong> = &#34;Resetbtn&#34; 
+                <strong>VALUE</strong>= &#34;Reset&#34;
+        <strong>/&gt;</strong>
+        <INPUT 
+                TYPE = "reset"
+                NAME = "Resetbtn" 
+                VALUE= "Reset"
+        />
+        </pre>
+    </li>
+</ol>   
+                        
+                        
+                        
+                        
+                        <pre>
+                            <code class="language-html">
+&lt;html&gt;
+    &lt;head&gt; 
+        &lt;title&gt; Profile Info Form &lt;/title&gt;      
+    &lt;/head&gt;
+    &lt;body&gt; 
+        &lt;h1&gt;Profile Submission Form &lt;/h1&gt;
+        &lt;form name=&#34;profile&#34; action=&#34;profile.php&#34; method=GET&gt;
+             &lt;table border=1 cellspacing=1 cellpadding=1 width=40% bgcolor=gray&gt;
+             
+                 &lt;!-- Text Box/Password  For Single line text input --&gt;
+                 &lt;tr align=center&gt; &lt;!-- start of third row definition --&gt;
+                    &lt;td&gt; Full Name: &lt;/td&gt;
+                    &lt;td&gt;
+                       &lt;INPUT 
+                                TYPE=&#34;TEXT&#34; 
+                                NAME=&#34;txtcompany&#34; 
+                                VALUE=&#34;NFOSYS&#34; 
+                                SIZE=&#34;10&#34;
+                                MAXLENGTH=&#34;15&#34;
+                        &gt;
+                    &lt;/td&gt;
+                 &lt;/tr&gt;
+                 
+                  &lt;!-- Text Area for Multiple line texts input --&gt;
+                 &lt;tr align=center&gt; &lt;!-- start of third row definition --&gt;
+                    &lt;td&gt; About yoursel: &lt;/td&gt;
+                    &lt;td&gt;
+                       &lt;TEXTAREA 
+                                NAME=&#34;about&#34; 
+                                ROWS=&#34;3&#34; 
+                                COLS=&#34;40&#34;
+                                PLACEHOLDER=&#34;Write about your self hear not loger than 120 words&#34;
+                        &gt;
+                        &lt;/TEXTAREA&gt;
+                    &lt;/td&gt;
+                 &lt;/tr&gt;
+              &lt;/table&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;           
+&lt;html&gt;                            
+                            </code>
+                        </pre>
+                    </li>
+                </ol>
+			</li>
+		</ol>
+		<hr />
+
+
+
+	</div>
+</body>
+</html>
