@@ -1,0 +1,1070 @@
+<html>
+<head>
+<title>WordPress</title>
+<link rel="stylesheet" href="prism.css">
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="style-int-js.css">
+<style>
+   .syntax-selector{
+        background:rgb(0, 255, 0);
+        padding: 4px;
+        font-size: 16px;
+   }
+   .syntax-block{
+        background:rgb(0, 255, 255);
+        padding: 4px;
+        font-size: 16px;
+   }
+   .syntax-declaration{
+        background:rgb(192, 192, 192);
+        padding: 4px;
+        font-size: 16px;
+   }
+   span i{
+        background:rgb(192, 192, 192);
+   }
+</style>
+<script src="prism.js"></script>
+</head>
+<body>
+     <div class="content">
+        <h1>Web Design - CSS</h1>
+        <table class="lesson">
+          <tr>
+              <th class="lesson-left">                
+                    <h3>CSS</h3>
+                    <ol>
+                        <li>Introduction</li>
+                        <li>Declaration</li>
+                        <li>Selector</li>
+                        <li>Formatting</li>
+                        <li>Properties</li>
+                        <li>Homeworks</li>
+            
+                    </ol>
+              </th>
+              <th class="lesson-right">                
+                    <h3>Web Design</h3>
+                    <ol>
+                        <li><a href="introduction-web-stand-tools.html">Standards and Tools</a></li>
+                        <li><a href="introduction-html.html">HTML</a></li>
+                        <li><a href="introduction-css.html">CSS</a></li>
+                        <li><a href="introduction-javascript.html">JavaScript</a></li>
+                        <li>Frameworks and Libraries</li>
+                        <li>Homeworks</li>
+            
+                    </ol>
+              </th>
+          </tr>
+        </table>
+        <hr />
+        
+        <h2>Introduction</h2>
+        <p>CSS stands for Cascading Style Sheets. It is a stylesheet language that describes the presentation of an HTML (or XML) document.</p>
+        <p>
+            CSS describes how HTML elements are to be rendered and displayed on screen, on paper, or in other media. 
+            It is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+            CSS saves a lot of work. It can control the layout of multiple web pages all at once.
+        </p>
+        <p>This tutorial will teach you CSS from basic to advanced </p>
+        
+        <h3>CSS Syntax</h3>
+        <p>A CSS rule-set consists of a selector and a declaration block:</p>
+        <p>A CSS comprises of style rules that are interpreted by the browser and then applied to the corresponding elements in your document.</p>
+        <p>A CSS rule-set consists of a selector and a declaration block which made of three parts</p>
+        <ul>
+            <li><strong>Selector:</strong> A selector is an HTML tag at which a style will be applied. This could be any
+             like &lt;h1&gt; or &lt;table&gt; etc. tag
+            </li>
+            <li><strong>Property:</strong> A property is a type of attribute of HTML tag. Put simply, all the HTML
+                attributes are converted into CSS properties. They could be color, border, etc.
+            </li>
+            <li><strong>Value:</strong> Values are assigned to properties. For example, color property can have the
+                value either red or #F1F1F1 etc.
+            </li>
+        </ul>
+        <p>You can put CSS Style Rule Syntax as follows</p>
+        
+        <div class="sourcecode">
+            <pre>
+              Selector    Declaration       Declaration
+             
+                <span class="syntax-selector">h1</span>  <span class="syntax-block">{ <i>color:blue;</i> <i>font-size:12px;</i> }</span>
+ 
+                        propety  value    property   value
+            </pre>
+            <ul>
+                <li>The selector points to the HTML element you want to style.</li>
+                <li>The declaration block contains one or more declarations separated by semicolons.</li>
+                <li>Each declaration includes a CSS property name and a value, separated by a colon.</li>
+                <li>A CSS declaration always ends with a semicolon, and declaration blocks are surrounded by curly braces</li>
+            </ul>
+        </div>
+        
+        <h3>Three Ways to Insert CSS</h3>
+        <p>Styling can be added to HTML elements in 3 ways:</p>
+        <ul>
+            <li><strong>Inline</strong> - using a style attribute in HTML elements</li>
+            <li><strong>Embaded</strong> - using a &lt;style&gt; element in the HTML &lt;head&gt; section</li>
+            <li><strong>External</strong> - using one or more external CSS files</li>
+        </ul>
+
+        <p>The most common way to add styling, is to keep the styles in separate CSS files.</p>
+        
+        <ol>
+            <li><strong>Inline Styling (Inline CSS)</strong>
+                <p> Inline styling is used to apply a unique style to a single HTML element.</p>
+                <p>Inline styling uses the style attribute.</p>
+                <p>This example changes the text color of the &lt;h1&gt; element to blue:</p>
+                <div class="sourcecode">
+                  <strong>Example</strong>   
+                  <code class="language-html">
+                    &lt;h1 style=&#34;color:blue;&#34;&gt;This is a Blue Heading&lt;/h1&gt;
+                  </code>
+                </div>
+                <p></p>
+            </li>
+            
+            <li><strong>Embaded Styling (Embaded CSS)</strong>
+                <p>Embaded styling is used to define a style for one HTML page.</p>
+                <p>Embaded styling is defined in the &lt;head&gt; section of an HTML page, within a &lt;style&gt; element:</p>
+                <div class="sourcecode">
+                  <strong>Example</strong><pre> 
+                  <code class="language-html">
+                    &lt;!DOCTYPE html&gt;
+				    &lt;html&gt;
+						&lt;head&gt;
+						  &lt;style&gt;
+						      body {background-color:lightgrey;}
+						      h1 {color:blue;}
+						      p {color:green;}
+						  &lt;/style&gt;
+						&lt;/head&gt;
+						&lt;body&gt;
+						  &lt;h1&gt;This is a heading&lt;/h1&gt;
+						  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+						&lt;/body&gt;
+					&lt;/html&gt;
+                  </code>
+                  </pre>  
+                </div>
+                <p></p>
+            </li>
+            <li><strong>External Styling (External CSS)</strong>
+                <p>An external style sheet is used to define the style for many pages.</p>
+                <p>With an external style sheet, you can change the look of an entire web site by changing one file!</p>
+                <p>To use an external style sheet, add a link to it in the &lt;head&gt; section of the HTML page:</p>
+                <div class="sourcecode">
+                  <strong>Example</strong><pre> 
+                  <code class="language-html">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                        &lt;head&gt;
+                          &lt;link rel="stylesheet" href=&#34;styles.css&#34;&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                          &lt;h1&gt;This is a heading&lt;/h1&gt;
+                          &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                        &lt;/body&gt;
+                    &lt;/html&gt;
+                  </code>
+                  </pre>  
+                </div>
+                <p>An external style sheet can be written in any text editor. The file should not contain any html tags. The style sheet file must be saved with a .css extension.</p>
+                <p>Here is how the "styles.css" looks:</p>
+                <div class="sourcecode">
+                  <strong>Example</strong><pre>
+                  <code class="language-css">
+                        body {background-color:lightgrey;}
+                        h1 {color:blue;}
+                        p {color:green;}
+                  </code>
+                  </pre>
+                </div>
+            </li>
+        </ol>
+        
+        <h3>Imported CSS - @import Rule</h3>
+        <p>@import is used to import an external stylesheet in a manner similar to the &lt;link&gt; element. Here is the generic syntax of @import rule.</p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <div>
+            <p> <strong>&lt;head&gt; &lt;@import &#34;URL&#34;; &lt;/head&gt;</strong></p>
+            <p>Here URL is the URL of the style sheet file having style rules. You can use another syntax as well:</p>
+            <p> <strong>&lt;head&gt;  &lt;@import url(&#34;URL&#34;);  &lt;/head&gt;</strong></p>
+            <p>Following is the example showing you how to import a style sheet file into an HTML document:</p><pre>
+            <code class="language-html">
+                &lt;head&gt;
+                  @import &#34;mystyle.css&#34;;
+                &lt;/head&gt;
+            </code>
+            </pre>
+            </div>
+        </div>
+        
+        <h3>CSS Rules Overriding</h3>
+        <p>
+            We have discussed four ways to include style sheet rules in an HTML document. Here is the rule to override any Style Sheet Rule.
+        </p>
+        <ul>
+            <li>
+                Any inline style sheet takes the highest priority. So, it will override any rule defined in
+                &lt;style&gt;...&lt;/style&gt; tags or the rules defined in any external style sheet file.
+            </li>
+            <li>
+                Any rule defined in &lt;style&gt;...&lt;/style&gt; tags will override the rules defined in any external style sheet file.
+            </li>
+            <li>
+                Any rule defined in the external style sheet file takes the lowest priority, and the rules
+                defined in this file will be applied only when the above two rules are not applicable.
+            </li>
+        </ul>
+        
+        <h3>Handling Old Browsers</h3>
+        <p>
+            There are still many old browsers who do not support CSS. So, we should take care while writing our Embedded CSS in an HTML document. 
+            The following snippet shows how to use comment tags to hide CSS from older browsers:
+        </p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+             <code class="language-html">
+                &lt;style type=&#34;text/css&#34;&gt;
+                    &lt;!--
+                        body, td {
+                            color: blue;
+                        }
+                    --&gt;
+                &lt;/style&gt;
+             </code>
+            </pre>
+        
+        </div>
+        <h3>CSS Comments</h3>
+        <p>
+           Many times, you may need to put additional comments in your style sheet blocks. So, it is
+            very easy to comment any part in the style sheet. You can simply put your comments inside
+            /*.....this is a comment in style sheet.....*/. 
+        </p>
+        <p>
+            You can use /* ....*/ to comment multi-line blocks in similar way you do in C and C++
+            programming languages.
+        </p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+             <code class="language-css">
+                /* This is an external style sheet file */
+                h1, h2, h3 {
+				    color: #36C;
+				    font-weight: normal;
+				    letter-spacing: .4em;
+				    margin-bottom: 1em;
+				    text-transform: lowercase;
+				}
+				/* end of style rules. */
+             </code>
+            </pre>
+        
+        </div>
+    
+        <h2>Selectors</h2>
+        
+        <h3>The Universal Selectors</h3>
+        <p>Rather than selecting elements of a specific type, the universal selector quite simply matches the name of any element type:</p>       
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+             <code class="language-css">
+                * {
+                    color: #000000;
+                    font-weight: normal;
+                    letter-spacing: .4em;
+                    margin-bottom: 1em;
+                    text-transform: lowercase;
+                }
+             </code>
+            </pre>
+            <p>This rule renders the content of every element in our document in black.</p>
+        </div>
+        
+        <h3>The Type Selectors</h3>
+        <p>This is the same selector we have seen above. Again, one more example to give a color to all level 1 headings:</p>       
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+             <code class="language-css">
+                h1 {
+                    color: #000000;
+                }
+             </code>
+            </pre>
+        </div>
+        
+        <h3>The Descendant Selectors</h3>
+        <p>
+            Suppose you want to apply a style rule to a particular element only when it lies inside a
+            particular element. As given in the following example, the style rule will apply to &lt;em&gt;
+            element only when it lies inside the &lt;ul&gt; tag
+        </p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+             <code class="language-css">
+                ul em {
+                    color: #000000;
+                }
+             </code>
+            </pre>
+        </div>
+        <h3>The Class Selectors</h3>
+        <p>
+            You can define style rules based on the class attribute of the elements. All the elements having
+            that class will be formatted according to the defined rule.
+        </p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+             <code class="language-css">
+                .black {
+                    color: #000000;
+                }
+             </code>
+            </pre>
+	        <p>
+	            This rule renders the content in black for every element with class attribute set to black in our
+	            document. You can make it a bit more particular. For example:
+	        </p>
+            <pre>
+             <code class="language-css">
+                h1.black {
+                    color: #000000;
+                }
+             </code>
+            </pre>
+            <p>This rule renders the content in black for only &lt;h1&gt; elements with class attribute set to black.</p>
+            <p>You can apply more than one class selectors to a given element. Consider the following example:</p>
+            
+            <pre>
+             <code class="language-html">
+                &lt;p  class=&#34;center bold&#34;&gt;
+                    This para will be styled by the classes center and bold.
+                &lt;/p&gt;
+             </code>
+            </pre>
+
+        </div>
+        
+        <h3>The ID Selectors</h3>
+        <p>
+            You can define style rules based on the id attribute of the elements. All the elements having
+            that id will be formatted according to the defined rule.
+        </p>
+        
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+             <code class="language-css">
+                #black {
+                    color: #000000;
+                }
+             </code>
+            </pre>
+            <p>
+                This rule renders the content in black for every element with id attribute set to black in our
+                document. You can make it a bit more particular. For example
+            </p>
+            <pre>
+             <code class="language-css">
+                h1#black {
+                    color: #000000;
+                }
+             </code>
+            </pre>
+            <p>This rule renders the content in black for only &lt;h1&gt; elements with id attribute set to black.</p>
+            <p>
+                The true power of id selectors is when they are used as the foundation for descendant
+                selectors. For example
+            </p>
+            <pre>
+             <code class="language-css">
+                #black h2 {
+                    color: #000000;
+                }
+             </code>
+            </pre>
+            <p>
+                In this example, all level 2 headings will be displayed in black color when those headings will
+                lie within tags having id attribute set to black.
+            </p>
+        </div> 
+        
+        <h3>The Child Selectors</h3>
+        <p>
+            You have seen the descendant selectors. There is one more type of selector, which is very
+            similar to descendants but have different functionality. Consider the following example
+        </p>
+        
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+             <code class="language-css">
+                body > p {
+                    color: #000000;
+                }
+             </code>
+            </pre>
+            <p>
+                This rule will render all the paragraphs in black if they are a direct child of the &lt;body&gt;
+                element. Other paragraphs put inside other elements like &lt;div&gt; or &lt;td&gt; would not have any
+                effect of this rule.
+            </p>
+        </div>
+        
+        <h3>The Lookup Selectors</h3>
+        <p>We can specify styles that apply to tags or identifiers only when contained in other tags</p>
+        
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre><code class="language-css">
+                 ul.menu { padding: 0; }
+                 ul.menu li { text-decoration: none; }
+            </code></pre>
+            <pre><code class="language-html">
+              &lt;ul class=&#34;menu&#34;&gt;
+				&lt;li&gt;Menu item1&lt;/li&gt;
+				&lt;li&gt;Menu item2&lt;/li&gt;
+			  &lt;/ul&gt;
+            </code></pre>
+        </div>
+        
+        <h3>The Attribute Selectors</h3>
+        <p>
+            You can also apply styles to HTML elements with particular attributes. The style rule below
+            will match all the input elements having a type attribute with a value of text:
+        </p>
+        
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+             <code class="language-css">
+               input[type=&#34;text&#34;] {
+                    color: #000000;
+                }
+             </code>
+            </pre>
+            <p>
+                The advantage to this method is that the  &lt;input type="submit" /&gt; element is unaffected, and
+                the color applied only to the desired text fields.
+            </p>
+            <p>There are following rules applied to attribute selector</p>
+            <ul>
+                <li><strong>p[lang] -</strong> Selects all paragraph elements with a lang attribute.</li>
+                <li><strong>p[lang=&#34;fr&#34;] -</strong> Selects all paragraph elements whose lang attribute has a value of exactly &#34;fr&#34;.</li>
+                <li><strong>p[lang~=~&#34;fr&#34;] -</strong> Selects all paragraph elements whose lang attribute contains the word &#34;fr&#34;.</li>
+                <li><strong>p[lang~=~&#34;en&#34;] -</strong> Selects all paragraph elements whose lang attribute contains values that are exactly &#34;en&#34;, or begin with &#34;en-&#34;..</li>
+            </ul>
+        </div>
+        
+        <h3>Multiple Style Rules</h3>
+        <p>
+            You may need to define multiple style rules for a single element. You can define these rules
+            to combine multiple properties and corresponding values into a single block as defined in the
+            following example:
+        </p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+             <code class="language-css">
+                h1 {
+                    color: #000000;
+                    font-weight: normal;
+                    letter-spacing: .4em;
+                    margin-bottom: 1em;
+                    text-transform: lowercase;
+                }
+             </code>
+            </pre>
+            <p>
+                Here all the property and value pairs are separated by a <strong>semicolon (;)</strong>. 
+                You can keep them in a single line or multiple lines. For better readability, we keep them in separate lines.
+            </p>
+            <p>
+                For a while, don't bother about the properties mentioned in the above block. These properties
+                will be explained in the coming chapters and you can find the complete detail about properties
+                in CSS References
+            </p>
+        </div>
+        
+        <h3>Grouping Selectors</h3>
+        <p>
+            You can apply a style to many selectors if you like. Just separate the selectors with a comma,
+            as given in the following example    
+        </p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+             <code class="language-css">
+                h1, h2, h3 {
+                    color: #000000;
+                    font-weight: normal;
+                    letter-spacing: .4em;
+                    margin-bottom: 1em;
+                    text-transform: lowercase;
+                }
+             </code>
+            </pre>
+            <p>
+                This define style rule will be applicable to h1, h2 and h3 element as well. The order of the list
+                is irrelevant. All the elements in the selector will have the corresponding declarations applied to them.
+            </p>
+            <p>You can combine the various class selectors together as shown below:</p>
+            <pre>
+             <code class="language-css">
+                #content, #footer, #supplement {
+                    color: #000000;
+                    font-weight: normal;
+                    letter-spacing: .4em;
+                    margin-bottom: 1em;
+                    text-transform: lowercase;
+                }
+             </code>
+            </pre>
+            
+        </div>
+        <h3>Pseudo Selectors</h3>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <p>hover - Apply rule when mouse is over element (e.g. tooltip)</p>
+            <pre>
+             <code class="language-css">
+p:hover, a:hover {
+    background-color: yellow;
+}
+             </code>
+            </pre>
+            <p>a:link, a:visited - Apply rule when link has been visited or not visited (link)</p>
+            <pre>
+             <code class="language-css">
+a:visited { 
+    color: green;
+}
+a:link {
+    color: blue;
+} 
+             </code>
+            </pre>
+        </div>
+        
+        <h3>The DIV and SPAN tags</h3>
+        <p>
+            HTML has 2 tags, <strong>DIV</strong> and <strong>SPAN</strong>, that are specifically used with CSS and CLASS and ID attributes
+        </p>
+        <ul>
+           <li>
+            <p> A <strong>DIV</strong> tag contains a block of text - like a <b>paragraph</b>, <b>section</b> <b>heading</b>, or <b>title</b>
+           </li>
+           <li>
+            <p> A <strong>SPAN</strong> tag contains a short piece of text within a block like a <b>proper name</b>, or a <b>dollar amoun</b>
+            </li>
+        </ul>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+             <code class="language-html">
+&lt;div class=&#34;mainDocument&#34;&gt;
+	On his way to school,
+	&lt;span class=&#34;properName&#34;&gt;Milo Ifrem&lt;/span&gt;
+	stopped at the local groceteria and spent
+	&lt;span class=&#34;money&#34;&gt;$4.55&lt;/span&gt; on milk,
+	bread, and honey.
+&lt;/div&gt;
+&lt;div class=&#34;about&#34;&gt;
+	This document was written by
+	&lt;span class=&#34;properName&#34;&gt;Ifrem Nanecha&lt;/span&gt;
+	on &lt;span class=&#34;date&#34;&gt;Aug. 5th, 2024&lt;/span&gt;
+&lt;/div&gt;
+             </code>
+            </pre>
+        </div>
+        
+        <h2>Formating</h2>
+        <h3>Text Formating</h3>
+        <ul>
+            <li><strong>Typeface: font-family</strong>
+                <p>Consists of a comma-separated list of font names</p>
+		        <div class="sourcecode">
+		            <strong>Example</strong>
+		            <pre>
+		             <code class="language-css">
+h1 { font-family:&#34;Times New Roman&#34;,&#34;Luxi Serif&#34;,&#34;DejaVu LGC Serif&#34;, serif; }
+		             </code>
+		            </pre>
+		        </div>
+            </li>
+            
+            <li><strong>Font Size: font-size</strong>
+                <p>Specified in one of the CSS size units</p>
+                <ul>
+                    <li>1em is the width of a letter m (relative to surrounding text)</li>
+                    <li>1pt is a standard typographic point (1/72 inches)</li>
+                    <li>Keywords: xx-small, x-small, small, medium, large, x-large, xx-large are browser dependan</li>
+                    <li>Percentages: XXX% relative to the surrounding code</li>
+                </ul>
+                <p>Points and pixels are extremely accurate but not resizeable</p>
+                <div class="sourcecode">
+                    <strong>Example</strong>
+                    <pre>
+                        <code class="language-css">
+h1 { font-size: 200%; }
+h2 { font-size: large; }
+h3 { font-size: medium; }
+                        </code>
+                    </pre>
+                </div>
+             </li>
+             
+             <li><strong>Bold Fonts: font-weight</strong>
+                <p>Can be one of normal, bold, bolder, lighter, 100, 200, ..., 900</p>
+                <div class="sourcecode">
+                    <strong>Example</strong>
+                    <pre>
+                        <code class="language-css">
+h1 { font-weight: bold;}
+                        </code>
+                    </pre>
+                </div>
+             </li>
+             
+             <li><strong>The Font Style: font-style</strong>
+                <p>Can be one of normal, italic, or oblique</p>
+                <div class="sourcecode">
+                 <strong>Example</strong>
+                 <pre>
+                    <code class="language-css">
+em { font-style: italic; }
+                    </code>
+                </pre>
+                </div>
+             </li>
+             <li><strong>Text Color: color</strong>
+                <p> Can be a color name, a rgb value, or a hexadecimal value. There are 147 color names</p>
+                <div class="sourcecode">
+                 <strong>Example</strong>
+                 <pre>
+                    <code class="language-css">
+/* Make all headings pure red */
+	H1 { color: red; }
+	H2 { color: rgb(255,0,0); }
+	H3 { color: #ff0000; }
+                    </code>
+                </pre>
+                </div>
+             </li>
+             <li><strong>Text Backgroung: background</strong>
+                
+             </li>
+             <li><strong>Text Aligment: text-align</strong>
+                <p> Determine which side of the page (or containing box) that text lines up with Can be one of left, right, center, or justify </p>
+                <div class="sourcecode">
+                 <strong>Example</strong>
+                 <pre>
+                    <code class="language-css">
+h1 { text-align: center; }
+p { text-align: left; }
+                    </code>
+                </pre>
+                </div>
+             </li>
+             <li><strong>Decoration: text-decoration</strong>
+                <p>
+                    Add some decoration to the text which can be one of none, underline, overline, line-through, or blink
+                    Treat blink like a contagious disease.
+                </p>
+                <div class="sourcecode">
+                 <strong>Example</strong>
+                 <pre>
+                    <code class="language-css">
+ h1 { text-decoration: underline; }
+ a { text-decoration: none; }
+                    </code>
+                </pre>
+                </div>
+             </li>
+             <li><strong>Ident: text-indent</strong>
+                <p>
+                    Specifies a length by which the first line of text should be indented.
+                    Length can be measured in a relative unit.
+                </p>
+                <ul type="square">
+                    <li>em: the font-size of the current font (width of a letter m</li>
+                    <li>ex: the x-height of the current font (height of a letter x)</li>
+                    <li>px: one screen pixel</li>
+                </ul>
+                <p>Or an absolute unit</p>
+                <ul type="square">
+                    <li>Inches (in) centimeters (cm) millimeters (mm), points (pt), or picas (pc)</li>
+                    <li>1pt = (1/72)in and 1pc=12pt</li>
+                </ul>
+                
+                <div class="sourcecode">
+                 <strong>Example</strong>
+                 <pre>
+                    <code class="language-css">
+p { text-indent: 5em; }
+                    </code>
+                </pre>
+                </div> 
+                </li>
+                
+                <li><strong>Capitalize: text-transform</strong>
+                    <p>Can actually transform the text to one of</p>
+                    <ul>
+                        <li>none: don't do anything to the text</li>
+                        <li>capitalize: Start each word with an uppercase letter</li>
+                        <li>uppercase: Make everything uppercase (allcaps)</li>
+                        <li>lowercase: Make everything lowercase</li>
+                    </ul>
+                    <div class="sourcecode">
+                     <strong>Example</strong>
+                     <pre>
+                        <code class="language-css">
+h1 { 
+    font-size: large;
+    text-transform: capitalize;
+  }
+h2 { 
+    font-size: normal;
+    text-transform: uppercase;
+    }
+                        </code>
+                    </pre>
+                   </div> 
+                </li>
+                <li><strong>White space: white-space</strong>
+                    <p>Defines how white space (space, tabs, carriage-returns) is handled. It can be one of:</p>
+                    <ul type="square">
+                        <li>normal: Normal formatting, wrap at white space, merge multiple whitespace</li>
+                        <li>pre: treat as preformatted text</li>
+                        <li>nowrap: don't wrap at whitespace</li>
+                    </ul>
+                    <div class="sourcecode">
+                     <strong>Example</strong>
+                     <pre>
+                        <code class="language-css">
+a.properName { white-space: nowrap; }
+                        </code>
+                    </pre>
+                   </div> 
+                </li>
+                <li><strong>Other Text formatings</strong>
+                    <p>Which probably should not be used unless you know a lot about typesetting.</p>
+                    <ul type="square">
+                        <li>direction: Sets the text direction</li>
+                        <li>line-height: Sets the distance between lines</li>
+                        <li>letter-spacing: Sets the space between characters</li>
+                        <li>text-shadow: Make a colored text shadow</li>
+                        <li>unicode-bidi: Allows english blocks to flow left-to-right and Arabic blocks flow right-to-left on the same page</li>
+                        <li>word-spacing: Sets the space between words</li>
+                    </ul>
+                    <div class="sourcecode">
+                     <strong>Example</strong>
+                     <pre>
+                        <code class="language-css">
+a.properName { white-space: nowrap; }
+                        </code>
+                    </pre>
+                   </div> 
+                </li>
+                
+                
+                <li><strong>Lists</strong>  
+                    <p>Several properties are specific to lists and list items</p>
+                    <ul type="square">
+                        <li>list-style-image: sets an image to use as the bullet marker</li>
+                        <li>list-style-position: controls where the bullet appears</li>
+                        <li>list-style-type: specifies what kind of bullet to use</li>
+                        <li>Values may be:
+                            <p>
+                            none, disc, circle, square, decimal, decimal-leading-zero,
+                            lower-roman, upper-roman, lower-alpha, upper-alpha, lower-greek, 
+                            lower-latin, upper-latin, hebrew, armenian,georgian, cjk-ideographic, 
+                            hiragana, katakana, hiragana-iroha,katakana-iroha
+                            </p>
+                        </li>
+                        
+                    </ul>
+                </li>
+        </ul>
+
+        <h2>CSS Properties</h2>
+        <p>
+
+        </p>
+        <h3>Measurement Units</h3>
+        <p>
+            CSS supports a number of measurements including absolute units such
+            as inches, centimeters, points, and so on, as well as relative measures such as percentages
+            and em units. You need these values while specifying various measurements in your Style
+            rules
+        </p>
+        <p>List of measurement units with examples:</p>
+        <table border='1'cellspacing='0' cellpadding='0'>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Unit</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Percentage</td>
+                    <td align="center"><strong>%</strong></td>
+                    <td>Defines a measurement as a percentage relative to another value, typically an enclosing element.</td>
+                    <td><code class="language-css"> p {line-height: 125%;}</code></td>
+                </tr>
+                <tr>
+                    <td>Centimeter</td>
+                    <td align="center"><strong>cm</strong></td>
+                    <td>Defines a measurement in centimeters.</td>
+                    <td><code class="language-css">div {margin-bottom: 2cm;}</code></td>
+                </tr>
+                <tr>
+                    <td>Element</td>
+                    <td align="center"><strong>em</strong></td>
+                    <td>(n  times the element's current font size)
+                        A relative measurement for the height of
+                        a font in em spaces. Because an em unit
+                        is equivalent to the size of a given font, if
+                        you assign a font to 12pt, each "em" unit
+                        would be 12pt; thus, 2em would be 24pt.</td>
+                    <td><code class="language-css"> p {letter-spacing: 7em;} </code></td>
+                </tr>
+                <tr>
+                    <td>Root Element</td>
+                    <td align="center"><strong>rem</strong></td>
+                    <td>n  times the root element's current font size.</td>
+                    <td><code class="language-css"> p {letter-spacing: 3rem;} </code></td>
+                </tr>
+                <tr>
+                    <td>X-Height</td>
+                    <td align="center"><strong>ex</strong></td>
+                    <td>This value defines a measurement
+                        relative to a font's . The x-height
+                        is determined by the height of the font's
+                        lowercase letter x.</td>
+                    <td width="30%"><code class="language-css">p {line-height:3ex;}</code></td>
+                </tr>
+                <tr>
+                    <td>Inches</td>
+                    <td align="center"><strong>in</strong></td>
+                    <td>Defines a measurement in inches.</td>
+                    <td><code class="language-css"> p {word-spacing: .15in;} </code></td>
+                </tr>
+                <tr>
+                    <td>Millimeter</td>
+                    <td align="center"><strong>mm</strong></td>
+                    <td>Defines a measurement in millimeters.</td>
+                    <td><code class="language-css"> p {word-spacing: 15mm;}</code></td>
+                </tr>
+                <tr>
+                    <td>Pica</td>
+                    <td align="center"><strong>pc</strong></td>
+                    <td>Defines a measurement in picas. A pica is
+                        equivalent to 12 points; thus, there are 6
+                        picas per inch.</td>
+                    <td><code class="language-css"> p {font-size: 20pc;}</code></td>
+                </tr>
+                <tr>
+                    <td>Point</td>
+                    <td align="center"><strong>pt</strong></td>
+                    <td>Defines a measurement in points. A point
+                        is defined as 1/72nd of an inch.</td>
+                    <td><code class="language-css"> body {font-size: 18pt;}</code></td>
+                </tr>
+                <tr>
+                    <td>Pixel</td>
+                    <td align="center"><strong>px</strong></td>
+                    <td>Defines a measurement in screen pixels.</td>
+                    <td><code class="language-css"> p {padding: 25px;}</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr/>
+        <h3>Color Properties</h3>
+        <p>
+            CSS uses color values to specify a color. Typically, these are used to set a color either for the
+            foreground of an element (i.e., its text) or for the background of the element. They can also
+            be used to affect the color of borders and other decorative effects.
+        </p>
+        <p>
+            You can specify your color values in various formats. Following table lists all the possible
+            formats:
+        </p>
+        <table align=center border='1'cellspacing='0' cellpadding='0'>
+            <thead>
+                <tr>
+                    <th>Format</th>
+                    <th>Syntax</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hex Code </td>
+                    <td align="center"><strong>#RRGGBB</strong></td>
+                    <td><code class="language-css"> p{color:#FF0000;}</code></td>
+                </tr>
+                <tr>
+                    <td>Short Hex Code </td>
+                    <td align="center"><strong>#RGB</strong></td>
+                    <td><code class="language-css"> p{color:#6A7;}</code></td>
+                </tr>
+                <tr>
+                    <td>RGB %</td>
+                    <td align="center"><strong>rgb(rrr%,ggg%,bbb%) </strong></td>
+                    <td><code class="language-css"> p{color:rgb(50%,50%,50%);}</code></td>
+                </tr>
+                <tr>
+                    <td>RGB Absolute</td>
+                    <td align="center"><strong>rgb(rrr,ggg,bbb)</strong></td>
+                    <td><code class="language-css"> p{color:rgb(0,0,255);}</code></td>
+                </tr>
+                <tr>
+                    <td>keyword</td>
+                    <td align="center"><strong>aqua, black, etc.  (140 standard names)</strong></td>
+                    <td><code class="language-css"> p{color:teal;}</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>These formats are explained in more detail in the following sections:</p>
+        <ul>
+            <li><strong>CSS Colors - Hex Codes</strong>
+                <p>
+	                A hexadecimal is a 6 digit representation of a color. The first two digits (RR) represent a red
+	                value, the next two are a green value (GG), and the last are the blue value (BB).
+	                A hexadecimal value can be taken from any graphics software like Adobe Photoshop, Jasc
+	                Paintshop Pro, or even using Advanced Paint Brush.
+                </p>
+                <p>Each hexadecimal code will be preceded by a pound or hash sign '#'. Following are the examples to use Hexadecimal notation.</p>
+                <table align=center border='1'cellspacing='0' cellpadding='0'>
+                    <tbody>
+                        <tr><th>Color</th>
+                            <td style="background:#000000;width:50px;" ></td>
+                            <td style="background:#FF0000;width:50px;" ></td> 
+                            <td style="background:#00FF00;width:50px;" ></td> 
+                            <td style="background:#0000FF;width:50px;" ></td> 
+                            <td style="background:#FFFF00;width:50px;" ></td> 
+                            <td style="background:#00FFFF;width:50px;" ></td> 
+                            <td style="background:#FF00FF;width:50px;" ></td> 
+                            <td style="background:#C0C0C0;width:50px;" ></td> 
+                            <td style="background:#FFFFFF;width:50px;" ></td> 
+                        </tr>
+                        <tr>
+                            <th>Hex Code</th> 
+                            <td>#000000</td> 
+                            <td>#FF0000</td> 
+                            <td>#00FF00</td>
+                            <td>#0000FF</td>
+                            <td>#FFFF00</td>
+                            <td>#00FFFF</td>
+                            <td>#FF00FF</td>
+                            <td>#C0C0C0</td>
+                            <td>#FFFFFF</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li><strong>CSS Colors - Short Hex Codes</strong>
+                <p>
+                    This is a shorter form of the six-digit notation. In this format, each digit is replicated to arrive
+                    at an equivalent six-digit value. For example: #6A7 becomes #66AA77
+                </p>
+                <p> 
+                    A hexadecimal value can be taken from any graphics software like Adobe Photoshop, Jasc
+                    Paintshop Pro or even using Advanced Paint Brush.
+                </p>
+                <p>
+                    Each hexadecimal code will be preceded by a pound or hash sign #. Following are the
+                    examples to use the Hexadecimal notation.
+                </p>
+                <table align=center border='1'cellspacing='0' cellpadding='0'>
+                    <tbody>
+                        <tr><th>Color</th>
+                            <td style="background:#000;width:50px;" ></td>
+                            <td style="background:#F00;width:50px;" ></td> 
+                            <td style="background:#0F0;width:50px;" ></td> 
+                            <td style="background:#00F;width:50px;" ></td> 
+                            <td style="background:#FF0;width:50px;" ></td> 
+                            <td style="background:#0FF;width:50px;" ></td> 
+                            <td style="background:#F0F;width:50px;" ></td> 
+                            <td style="background:#CCC;width:50px;" ></td> 
+                            <td style="background:#FFF;width:50px;" ></td> 
+                        </tr>
+                        <tr>
+                            <th>Short Hex Code</th> 
+                            <td>#000</td> 
+                            <td>#F00</td> 
+                            <td>#0F0</td>
+                            <td>#00F</td>
+                            <td>#FF0</td>
+                            <td>#0FF</td>
+                            <td>#F0F</td>
+                            <td>#CCC</td>
+                            <td>#FFF</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <hr/>
+        <h3>Position Property</h3>
+        <ul>
+            <li><strong><em>position:static;</em></strong> (default) - Position in document flow</li>
+            <li><strong><em>position:relative;</em></strong> Position relative to default position via top, right, bottom, and left properties</li>
+            <li><strong><em>position:fixed;</em></strong> Position to a fixed location on the screen via top, right, bottom, and left properties</li>
+            <li><strong><em>position:absolute;</em></strong> Position relative to ancestor absolute element via top, right, bottom, and left properties</li>
+            
+        </ul>
+         <p>Fixed position (0,0) is top left corner</p>   
+        <hr/>
+        
+        <h3>Visibility Control Properties</h3>
+        <ul>
+            <li><strong><em>display:none;</em></strong> - Element is not displayed and takes no space in layout.</li>
+            <li><strong><em>display:inline;</em></strong> - Element is treated as an inline element. </li>
+            <li><strong><em>display:block;</em></strong> - Element is treated as a block element. </li>
+            <li><strong><em>display:flex;</em></strong> - Element is treated as a flex container.</li>
+            <li><strong><em>display:grid;</em></strong> - Element is treated as a grid container.</li>
+            <li><strong><em>visibility:hidden;</em></strong> - Element is hidden but space still allocated. </li>
+            <li><strong><em>visibility:visible;</em></strong> - Element is normally displayed</li>
+        </ul>
+        <hr/>
+        
+        <h3>Visibility Control Properties</h3>
+        <ul>
+            <li><strong><em>display: flex;</em></strong> (Flexbox)</li>
+            <li><strong><em>display: grid;</em></strong> (Grid) newer layout method
+                <ul type="disc">
+                    <li>Items flex to fill additional space and shrink to fit into smaller spaces.</li>
+                    <li>Useful for web app layout:
+                        <ul type="square">
+                            <li>Divide up the available space equally among a bunch of elements</li>
+                            <li>Align of different sizes easily</li>
+                            <li>Key to handling different window and display sizes</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Flexbox - Layout one dimension (row or column) of elements</li>
+            <li>Grid - Layout in two dimensions (rows and columns) of elements</li>
+        </ul>
+            
+            
+    </div>
+    
+</body>
+</html>
