@@ -1,0 +1,652 @@
+<html>
+
+<head>
+    <title>WordPress</title>
+    <link rel="stylesheet" href="prism.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style-int-js.css">
+    <style>
+    </style>
+    <script src="prism.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Web Design - JavaScript</h1>
+        <table class="lesson">
+            <tr>
+                <th class="lesson-left">
+                    <h3>JavaScript</h3>
+                    <ol>
+                        <li>Introduction</li>
+                        <li>The Language</li>
+                        <li>The DOM</li>
+                        <li>Responsive</li>
+                        <li>Frameworks and Libraries</li>
+                        <li>Homeworks</li>
+
+                    </ol>
+                </th>
+                <th class="lesson-right">
+                    <h3>Web Design</h3>
+                    <ol>
+                        <li><a href="introduction-web-stand-tools.html">Standards and Tools</a></li>
+                        <li><a href="introduction-html.html">HTML</a></li>
+                        <li><a href="introduction-css.html">CSS</a></li>
+                        <li><a href="introduction-javascript.html">JavaScript</a></li>
+                        <li>Frameworks and Libraries</li>
+                        <li>Homeworks</li>
+
+                    </ol>
+                </th>
+            </tr>
+        </table>
+        <hr />
+        <h2>Lesson 1:- Introduction</h2>
+
+        <p>JavaScript was initially created to "make web pages alive".</p>
+        <p>The programs in this language are called scripts. They can be written right in a web page's HTML and run
+            automatically as the page loads.</p>
+        <p>
+            Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
+            In this aspect, JavaScript is very different from another language called <strong>Java, PHP</strong>
+        </p>
+        <p>
+            When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that
+            time,
+            so it was decided that positioning a new language as a "younger brother" of Java would help.
+        </p>
+        <p>
+            But as it evolved, JavaScript became a fully independent language with its own specification called
+            ECMAScript, and now it has no relation to Java at all.
+        </p>
+        <p>Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that
+            has a special program called the JavaScript engine.</p>
+        <p>The browser has an embedded engine sometimes called a "JavaScript virtual machine".</p>
+        <p>
+            Different engines have different “codenames”. For example:
+
+        <ul>
+            <li><strong>V8</strong> - in Chrome, Opera and Edge.</li>
+            <li><strong>SpiderMonkey</strong> - in Firefox.</li>
+            <li>...There are other codenames like <strong>"Chakra"</strong> for IE, <strong>"JavaScriptCore"</strong>,
+                <strong>"Nitro"</strong> and <strong>"SquirrelFish"</strong> for Safari, etc.</li>
+        </ul>
+        </p>
+
+        <h3>What can in-browser JavaScript do?</h3>
+        <p>Modern JavaScript is a “safe” programming language. It does not provide low-level access to memory or the
+            CPU, because it was initially created for browsers which do not require it.</p>
+        <p>JavaScript's capabilities greatly depend on the environment it's running in. For instance, Node.js supports
+            functions that allow JavaScript to read/write arbitrary files, perform network requests, etc.</p>
+        <p>In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the
+            webserver.</p>
+
+        <p>
+            For instance, in-browser JavaScript is able to:
+        <ul>
+            <li>
+                <p>Add new HTML to the page, change the existing content, modify styles.</p>
+                <p>React to user actions, run on mouse clicks, pointer movements, key presses.</p>
+                <p>Send requests over the network to remote servers, download and upload files (so-called AJAX and COMET
+                    technologies).</p>
+                <p>Get and set cookies, ask questions to the visitor, show messages.</p>
+                <p>Remember the data on the client-side (“local storage”).</p>
+            </li>
+        </ul>
+        </p>
+
+        <h3>What CAN'T in-browser JavaScript do?</h3>
+        <p>
+            JavaScript's abilities in the browser are limited to protect the user's safety.
+            The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+        <p>
+            Examples of such restrictions include:
+        <ul>
+            <li>
+                <p>JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute
+                    programs. It has no direct access to OS functions.</p>
+                <p>Modern browsers allow it to work with files, but the access is limited and only provided if the user
+                    does certain actions, like “dropping” a file into a browser window or selecting it via an
+                    &lt;input&gt; tag.</p>
+                <p>There are ways to interact with the camera/microphone and other devices, but they require a user's
+                    explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the
+                    surroundings and send the information to the Server.</p>
+                <p>Different tabs/windows generally do not know about each other. Sometimes they do, for example when
+                    one window uses JavaScript to open the other one. But even in this case, JavaScript from one page
+                    may not access the other page if they come from different sites (from a different domain, protocol
+                    or port).</p>
+                <p>This is called the “Same Origin Policy”. To work around that, both pages must agree for data exchange
+                    and must contain special JavaScript code that handles it. We’ll cover that in the tutorial.</p>
+                <p>This limitation is, again, for the user's safety. A page from http://anysite.com which a user has
+                    opened must not be able to access another browser tab with the URL http://gmail.com, for example,
+                    and steal information from there.</p>
+                <p>JavaScript can easily communicate over the net to the server where the current page came from. But
+                    its ability to receive data from other sites/domains is crippled. Though possible, it requires
+                    explicit agreement (expressed in HTTP headers) from the remote side. Once again, that’s a safety
+                    limitation.</p>
+            </li>
+        </ul>
+        </p>
+        <h3>What makes JavaScript unique?</h3>
+        <p>
+            There are at least three great things about JavaScript:
+        <ul>
+            <li>
+                <p>Full integration with HTML/CSS.</p>
+                <p>Simple things are done simply.</p>
+                <p>Supported by all major browsers and enabled by default.</p>
+                <p>JavaScript is the only browser technology that combines these three things.</p>
+            </li>
+        </ul>
+        </p>
+        <p>That's what makes JavaScript unique. That' why it's the most widespread tool for creating browser interfaces.
+        </p>
+        <p>That said, JavaScript can be used to create servers, mobile applications, etc.</p>
+        <hr />
+
+        <h3>Adding JavaScript to HTML</h3>
+        <p>
+            JavaScript can be inserted into documents by using the SCRIPT tag. You can have any number of scripts in
+            your HTML page.
+            Scripts can be placed in the HEAD or in the BODY part of your HTML code.
+        <ul type="-">
+            <li>In the HEAD, scripts are run before the page is displayed</li>
+            <li>In the BODY, scripts are run as the page is displayed</li>
+        </ul>
+        <p>In the HEAD is the right place to define functions and variables that are used by scripts within the BODY.
+        </p>
+        </p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+                <code class="language-html">
+&lt;html&gt;
+    &lt;head&gt;                    
+        &lt;title&gt;Hello World in JavaScript&lt;/title&gt;
+        &lt;script type=&#34;text/javascript&#34;&gt;
+            function helloWorld() {
+                document.write(&#34;Hello World!&#34;);
+            }
+        &lt;/script&gt;
+    &lt;/head&gt; 
+    &lt;body&gt;
+        &lt;script type=&#34;text/javascript&#34;&gt;
+            helloWorld();
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;               
+                </code>
+            </pre>
+        </div>
+        <p>
+            Scripts can also be loaded from an external file. This is useful if you have a complicated script or
+            set of subroutines that are used in several different
+            documents.
+        </p>
+        <p>You can load your scripts in the HEAD or in the BODY part of your HTML code.</p>
+
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+                <code class="language-html">
+&lt;script src=&#34;myscript.js&#34;&gt; &lt;/script&gt;
+                </code>
+            </pre>
+        </div>
+        <hr />
+
+        <h2>The Language</h2>
+        <p>
+            JavaScript is a programming language. It is currently the only programming language that
+            your browser can execute natively. (There are efforts to change that.).
+        </p>
+        <h3>Variables</h3>
+        <p>
+            JavaScript has variables that you can declare with the optional var keyword. Variables declared within a
+            function are local to
+            that function. Variables declared outside of any function are global variables.
+        </p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+                <code class="language-html">
+&lt;script type=&#34;text/javascript&#34;&gt; 
+    var myname = &#34;Ifrem Nanecha&#34;;                
+&lt;/script&gt;
+                </code>
+            </pre>
+        </div>
+        <hr />
+
+        <h3>Operators</h3>
+        <p> JavaScript has most of the operators we're used to from C/Java.</p>
+        <ul>
+            <li>Arithmetic (+, - , *, /, %)</li>
+            <li>Assignment (=, +=, -=, *= /=, %=, ++, --)</li>
+            <li>Logical (&&, ||, !)</li>
+            <li>Comparison (<,>, <=,>=, ==)</li>
+        </ul>
+        <hr />
+
+        <h3>Conditional Statments</h3>
+        <ul>
+            <li><strong>if</strong>
+                <div class="sourcecode">
+                    <strong>Syntax</strong>
+                    <pre>
+                        <code class="language-js">    
+                        if (...) {
+                            ...
+                        }
+                        </code>
+                    </pre>
+                </div>
+            </li>
+            <li><strong>if-else</strong>
+                <div class="sourcecode">
+                    <strong>Syntax</strong>
+                    <pre>
+                        <code class="language-js">    
+                        if (...) {
+                            ...
+                        } else {
+                            ...
+                        }
+                        </code>
+                    </pre>
+                </div>
+            </li>
+            <li><strong>Nested if-else</strong>
+                <div class="sourcecode">
+                    <strong>Syntax</strong>
+                    <pre>
+                        <code class="language-js">    
+                        if (...) {
+                            ...
+                        } else if(...) {
+                            ...
+                        } else {
+                            ...
+                        }
+                        </code>
+                    </pre>
+                </div>
+            </li>
+            <li><strong>switch, case</strong></li>
+        </ul>
+        <hr />
+
+        <h3>Loops</h3>
+        <ul>
+            <li><strong>for-loops</strong>
+                <div class="sourcecode">
+                    <strong>Syntax</strong>
+                    <pre>
+                        <code class="language-js">    
+                        for (let i = 0; i < 5; i++) { 
+                            /*create virible i and asign value 0*/
+                            /*check if i(0) is less than 5, comme to {} block do it whate ever in the block*/
+                            /*to do it again, increase i by 1 and check i is less than 5*/
+                         }
+                        </code>
+                    </pre>
+                </div>
+            </li>
+            <li><strong>while-loops:</strong>
+                <div class="sourcecode">
+                    <strong>Syntax</strong>
+                    <pre>
+                        <code class="language-js">    
+                        while (condition) { 
+                            /* check the condition first then do whate ever in the block({}) */
+                            /* again check the condition then do whate ever in the block({}) again*/
+                         }
+                        </code>
+                    </pre>
+                </div>
+            </li>
+            <li><strong>do-while</strong>
+                <div class="sourcecode">
+                    <strong>Syntax</strong>
+                    <pre>
+                        <code class="language-js">
+                            do{
+                                /*do whate ever in the block({}) first */
+                                /*then check the while condition to do it again*/
+                            } while (condition-meets) 
+                        </code>
+                    </pre>
+                </div>
+            </li>
+        </ul>
+        <hr />
+
+        <h3>Arrays</h3>
+        <p>JavaScript has arrays that are indexed starting at 0. Special version of for works with arrays</p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+                <code class="language-html">
+&lt;script type=&#34;text/javascript&#34;&gt; 
+    var colors = new Array();
+    colors[0] = &#34;red&#34;; colors[1] = &#34;green&#34;;
+    colors[2] = &#34;blue&#34;; colors[3] = &#34;orange&#34;;
+    colors[4] = &#34;magenta&#34;; colors[5] = &#34;cyan&#34;; 
+    
+    for (var i in colors) {
+        document.write(&#34;&lt;div style=\&#34;background-color:&#34;
+        + colors[i] + &#34;;\&#34;&gt;&#34;
+        + colors[i] + &#34;&lt;/div&gt;\n&#34;);
+    }
+&lt;/script&gt;
+                </code>
+            </pre>
+        </div>
+        <hr />
+
+        <h3>User Interaction</h3>
+        <p>There are three built-in methods of doing simple user interaction</p>
+        <ul>
+            <li><strong>alert(msg)</strong>
+                <p> alerts the user that something has happened</p>
+                <div class="sourcecode">
+                    <strong>Example</strong>
+                    <pre>
+                        <code class="language-html">
+        &lt;script type=&#34;text/javascript&#34;&gt; 
+            alert(&#34;This is alert message &#34;);              
+        &lt;/script&gt;
+                        </code>
+                    </pre>
+                </div>
+                <p></p>
+            </li>
+
+            <li><strong>confirm(msg)</strong>
+                <p> asks the user to confirm (or cancel) something</p>
+                <div class="sourcecode">
+                    <strong>Example</strong>
+                    <pre>
+                        <code class="language-html">
+        &lt;script type=&#34;text/javascript&#34;&gt; 
+            confirm(&#34;Are you sure you want to do this things?.&#34;);              
+        &lt;/script&gt;
+                        </code>
+                    </pre>
+                </div>
+                <p></p>
+            </li>
+
+            <li><strong>prompt(msg, default)</strong>
+                <p> asks the user to enter some text</p>
+                <div class="sourcecode">
+                    <strong>Example</strong>
+                    <pre>
+                        <code class="language-html">
+        &lt;script type=&#34;text/javascript&#34;&gt; 
+            prompt(&#34;Write your name&#34;,&#34;Ifrem&#34;);              
+        &lt;/script&gt;
+                        </code>
+                    </pre>
+                </div>
+                <p></p>
+            </li>
+        </ul>
+        <hr />
+
+        <h3>Function</h3>
+        <p>JavaScript lets you define functions using the function keyword. Functions can return values using the return
+            keyword</p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+                <code class="language-html">
+&lt;html&gt;
+    &lt;head&gt;                    
+        &lt;title&gt;Hello World in JavaScript&lt;/title&gt;
+        &lt;script type=&#34;text/javascript&#34;&gt;
+            function showConfirm() {
+                confirm(&#34;Are you sure you want to do this things?.&#34;);
+            }
+        &lt;/script&gt;
+    &lt;/head&gt; 
+    &lt;body&gt;
+        &lt;script type=&#34;text/javascript&#34;&gt;
+            showConfirm();
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt; 
+                </code>
+            </pre>
+        </div>
+        <hr />
+
+        <h3>Events</h3>
+        <p>JavaScript can be made to respond to user events. Here are common JavaScript Events:</p>
+        <ul>
+            <li><strong>onload and onunload :</strong> when a page is first visited or left</li>
+            <li><strong>onfocus, onblur, onchange :</strong> events pertaining to form elements</li>
+            <li><strong>onsubmit :</strong> when a form is submitted</li>
+            <li><strong>onmouseover, onmouseout :</strong> for menu properties effects</li>
+        </ul>
+        <p>A complete list of event types is available <a
+                href="http://www.w3schools.com/jsref/jsref_events.asp">here</a></p>
+        <hr />
+
+
+        <h3>Exception</h3>
+        <p>JavaScript also has try, catch, and throw keywords for handling JavaScript errors</p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+                <code class="language-html">
+&lt;script type=&#34;text/javascript&#34;&gt; 
+    try {
+        runSomeCode();
+    } catch(err) {
+    var txt="There was an error on this page.\n\n"
+        + "Error description: "
+        + err.description + "\n\n"
+        alert(txt)
+    }              
+&lt;/script&gt;
+                </code>
+            </pre>
+        </div>
+        <hr />
+
+        <h3>Comments </h3>
+        <p>Comments in JavaScript are delimited with // and /* */ as in Java and C++</p>
+        <hr />
+
+        <h3>Objects</h3>
+        <p>
+            JavaScript is object-oriented and uses the same method-calling syntax as Java.
+            We have already seen this with the document object
+            <code class="language-html">document.write(&#34;Hello World!&#34;);</code>
+        </p>
+        <p>Some basic objects are built-in to JavaScript</p>
+        <ul type="square">
+            <li><strong>String Object</strong>
+                <p>
+                    A String object is created every time you use a string literal (just like in Java).
+                    Have many of the same methods as in Java.
+                </p>
+                <ul type="disc">
+                    <li><em>charAt</em></li>
+                    <li><em>concat</em></li>
+                    <li><em>indexOf</em></li>
+                    <li><em>lastIndexOf</em></li>
+                    <li><em>match</em></li>
+                    <li><em>replace</em></li>
+                    <li><em>search</em></li>
+                    <li><em>slice</em></li>
+                    <li><em>split</em></li>
+                    <li><em>substr</em></li>
+                    <li><em>substring</em></li>
+                    <li><em>toLowerCase</em></li>
+                    <li><em>toUpperCase</em></li>
+                    <li><em>valueOf</em></li>
+                </ul>
+                <p>There are also some HTML specific methods</p>
+                <ul type="disc">
+                    <li><em>big</em></li>
+                    <li><em>blink</em></li>
+                    <li><em>bold</em></li>
+                    <li><em>fixed</em></li>
+                    <li><em>fontcolor</em></li>
+                    <li><em>fontsize</em></li>
+                    <li><em>italics</em></li>
+                    <li><em>link</em></li>
+                    <li><em>small</em></li>
+                    <li><em>strike</em></li>
+                    <li><em>sub</em></li>
+                    <li><em>sup</em></li>
+                </ul>
+                <p>Don't use the HTML methods (use CSS instead)</p>
+            </li>
+            <li><strong>Date Object</strong>
+                <p>
+                    The Date class makes working with dates easier. A new date is initialized with the current date.
+                    Dates can be compared and incremented
+                </p>
+                <div class="sourcecode">
+                    <strong>Example</strong>
+                    <pre>
+                <code class="language-html">
+&lt;script type=&#34;text/javascript&#34;&gt; 
+    var myDate = new Date();
+    myDate.setFullYear(2007,2,14);
+    var today = new Date();
+    var nextWeek = today + 7;
+    if (nextWeek > today) {
+        alert(&#34;You have less than one week left&#34;);
+    }               
+&lt;/script&gt;
+                </code>
+            </pre>
+                </div>
+                <p></p>
+            </li>
+            <li>
+                <p><strong>Array Object</strong> We have already seen the Array class </p>
+            </li>
+            <li>
+                <p><strong>Boolean Object</strong>The Boolean class encapsulates a boolean value</p>
+            </li>
+            <li><strong>Math Object</strong>
+                <p>The Math class encapsulates many commonly-used mathematical entities and formulas. These are:</p>
+                <ul type="disc">
+                    <li>abs, acos, asin, atan, atan2, ceil, cos, exp, floor, log, max, min, pow, random, round, sin,
+                        sqrt, tan</li>
+                    <li>E, LN2, LN10, LOG2E, LOG10E, PI, SQRT1_2, SQRT2</li>
+                </ul>
+                <div class="sourcecode">
+                    <strong>Example</strong>
+                    <pre>
+                <code class="language-html">
+&lt;script type=&#34;text/javascript&#34;&gt; 
+    if (Math.cos(Math.PI) != 0) {
+        alert(&#34;Something is wrong with Math.cos&#34;);
+    }              
+&lt;/script&gt;
+                </code>
+            </pre>
+                </div>
+            </li>
+        </ul>
+        <hr />
+
+        <h2>The DOM</h2>
+        <p><strong>The Document Object Model (DOM)</strong> is a specification that determines a mapping between
+            programming language
+            objects and the elementsof an HTML document and which is not specific to JavaScript.</p>
+
+        <h3>DOM Objects</h3>
+        <p>We have:</p>
+        <ul type="disc">
+            <li>
+                <p><strong>Environment Object</strong>:- Window, Navigator, Screen, History, Location, Document</p>
+            </li>
+            <li>
+                <p><strong>HTML Objects</strong> :- Anchor, Area, Base, Body, Button, Event, Form, Frame, Frameset,
+                    Iframe, Image, Checkbox, FileUpload, Hidden, Password, Radio, Reset, Submit, Text, Link, Meta,
+                    Object,
+                    Option, Select, Style, Table, TableCell, TableRow, TextArea
+                </p>
+            </li>
+        </ul>
+        <hr />
+
+        <h3>DOM: Document</h3>
+        <p>The Document object represents an HTML document and can be used to access all documents in a page. It
+            contains:</p>
+        <ul type="disc">
+            <li><strong>Several collections:</strong> anchors, forms, images, links</li>
+            <li><strong>Several properties:</strong> body, cookie, domain, lastModified, referrer, title, URL</li>
+            <li><strong>Several useful methods:</strong> getElementById, getElementsByName, getElementsByTagName, write,
+                writeln, open, close</li>
+        </ul>
+        <p>An instance of Document is already created for you, called document</p>
+        <div class="sourcecode">
+            <strong>Example</strong>
+            <pre>
+                <code class="language-html">
+&lt;script type=&#34;text/javascript&#34;&gt; 
+    function changeF() {
+        var cText = document.getElementById(&#34;c&#34;);
+        var fText = document.getElementById(&#34;f&#34;);
+    }           
+&lt;/script&gt;
+
+&lt;input type=&#34;text&#34; id=&#34;c&#34; onchange=&#34;changeC()&#34;&gt;C
+&lt;input type=&#34;text&#34; id=&#34;f&#34; onchange=&#34;changeF()&#34;&gt;F
+                </code>
+            </pre>
+        </div>
+        <hr />
+
+        <h3>DOM: Form Elements</h3>
+        <p>One of the most common uses of JavaScript is for form validation. Several HTML DOM classes encapsulate form
+            elements</p>
+        <ul type="disc">
+            <li>Form, Button, Checkbox, Hidden, Password, Text, Radio, Reset, Submit, Textarea</li>
+        </ul>
+        <div class="hint">
+            <strong>Warning:</strong> Using JavaScript is not a substitute for validating form data in CGI scripts
+        </div>
+        <hr />
+
+        <h3>DOM: Text</h3>
+        <p>A text entry field (input type="text") is encapsulated by a Text object that contains variables of:</p>
+        <ul>
+            <li>value, maxLength, id, size, name, tabindex, readOnly</li>
+        </ul>
+        <p>Changing these variables has an immediate effect on the displayed data</p>
+        <hr />
+
+        <h3>The Document Tree</h3>
+        <p>Accessing elements and changing their properties lets us do simple things like form validation, data transfer
+            etc...</p>
+        <p>HTML DOM lets us do much more. We can create, delete, and modify parts of the HTML document. For this we need
+            to understand the Document Tree</p>
+        <h4>Navigating the Document Tree</h4>
+        <p> With JavaScript we can navigate the document tree</p>
+        <ul type="disc">
+            <li><strong>document.getElementById()</strong></li>
+            <li><strong>document.getElementsByName()</strong></li>
+            <li><strong>document.getElementsByTagName()</strong></li>
+        </ul>
+        <p>return nodes in the document tree</p>
+        <p>Information can be obtained from</p>
+        <ul>
+            <li>nodeName - The tag name</li>
+            <li>nodeValue - The the text of a text node</li>
+            <li>nodeType - The kind of node</li>
+        </ul>
+        <hr />
+    </div>
+</body>
+
+</html>
